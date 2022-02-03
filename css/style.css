@@ -144,6 +144,8 @@ section {
     height: 2px;
     background-color: #000000;
     border-radius: 1px;
+    transition: all 300ms ease-in-out;
+    transform-origin: 1px 1px;
 }
 
 .empty span {
@@ -154,7 +156,52 @@ section {
 }
 
 .hamburger span:not(:last-child) {
-    margin-bottom: 4px;
+    margin-bottom: 5px;
+}
+
+.header.open span:first-child {
+    transform: rotate(45deg);
+}
+
+.header.open  span:nth-child(2) {
+    opacity: 0;
+}
+
+.header.open span:last-child {
+    transform: rotate(-45deg);
+}
+
+.header.open .overlay {
+    display: block;
+    animation: fade-in 300ms ease-in-out forwards;
+}
+
+.overlay {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 7rem;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: #F7313B;
+}
+
+@keyframes fade-in {
+    from {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    to {
+        display: block;
+        opacity: 1;
+    }
 }
 
 }
