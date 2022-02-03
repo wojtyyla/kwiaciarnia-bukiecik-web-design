@@ -1,2 +1,2 @@
-# bukiecik-web-dsgn
- A website desgin.
+# bukiecik-web-design
+ Design of a website
