@@ -177,7 +177,6 @@ section {
 }
 
 .overlay {
-    display: none;
     opacity: 0;
     position: fixed;
     top: 7rem;
@@ -185,22 +184,39 @@ section {
     bottom: 0px;
     left: 0px;
     background: #F7313B;
+    animation: fade-out 300ms ease-in-out forwards;
 }
 
 @keyframes fade-in {
     from {
-        display: none;
+        visibility: hidden;
         opacity: 0;
     }
 
     1% {
-        display: block;
+        visibility: visible;
         opacity: 0;
     }
 
     to {
-        display: block;
         opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    99%{
+        visibility: visible;
+        opacity: 0;
+    }
+
+    to {
+        visibility: hidden;
+        opacity: 0;
     }
 }
 
