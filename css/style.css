@@ -47,6 +47,10 @@ section {
     z-index: 999;
 }
 
+.mobile-menu {
+    display: none;
+}
+
 }
 
 .header-logo img {
@@ -214,7 +218,7 @@ nav {
 .mobile-menu a {
     display: block;
     color: black;
-    padding: 1rem;
+    padding: .7rem;
     font-size: 1.1rem;
     text-align: center;
 }
@@ -232,7 +236,8 @@ nav {
 }
 
 .mobile-menu ul {
-    padding: .4rem;
+    padding: .6rem;
+    margin-top: .5rem;
     color: black;
     background-color: #F2EFE9;
     text-decoration: none;
@@ -240,7 +245,29 @@ nav {
 
 .mobile-menu li a {
     font-size: .9rem;
-    padding: .3rem;
+    padding: .35rem;
+}
+
+.item ul, input[type="checkbox"] {
+    display: none;
+}
+
+.item input:checked ~ ul {
+    display: block;
+}
+
+.item {
+    padding: .7rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+label {
+    margin-left: 1.5rem;
+}
+
+label:hover {
+    color: #F7313B;
 }
 
 /* .desktop-nav li:hover .mobile-menu-realizacje {
