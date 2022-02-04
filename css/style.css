@@ -41,6 +41,12 @@ section {
     display: flex;
     justify-content: center;
 }
+
+.menu-realizacje {
+    display: none;
+    z-index: 999;
+}
+
 }
 
 .header-logo img {
@@ -86,11 +92,6 @@ section {
 
 .nav-btn:hover {
     background-color: #F7313B;
-}
-
-.menu-realizacje {
-    display: none;
-    z-index: 999;
 }
 
 .menu-realizacje li {
@@ -205,22 +206,58 @@ nav {
 
 .mobile-menu {
     position: absolute;
-    padding: 1.6rem;
-    padding-top: 8rem;
+    padding: 0rem;
+    padding-top: 7rem;
     width: 100%;
 }
 
 .mobile-menu a {
     display: block;
-    color: #F7313B;
+    color: black;
     padding: 1rem;
     font-size: 1.1rem;
     text-align: center;
 }
 
+.overlay a:hover {
+    color: #F7313B;
+}
+
 .nav-btn {
     font-size: 1.1rem;
 }
+
+.mobile-menu li {
+    list-style: none;
+}
+
+.mobile-menu ul {
+    padding: .4rem;
+    color: black;
+    background-color: #F2EFE9;
+    text-decoration: none;
+}
+
+.mobile-menu li a {
+    font-size: .9rem;
+    padding: .3rem;
+}
+
+/* .desktop-nav li:hover .mobile-menu-realizacje {
+    display: block;
+    position: absolute;
+    background: #F2EFE9;
+    margin-top: 0.1em;
+}
+
+.desktop-nav li:hover .mobile-menu-realizacje ul {
+    display: block;
+    margin: 10px 20px 15px 0px;
+    padding: 5px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+} */
 
 @keyframes fade-in {
     from {
