@@ -96,6 +96,7 @@ section {
 
 .nav-btn:hover {
     background-color: #F7313B;
+    transition: all ease 0.2s;
 }
 
 .menu-realizacje li {
@@ -270,22 +271,6 @@ label:hover {
     color: #F7313B;
 }
 
-/* .desktop-nav li:hover .mobile-menu-realizacje {
-    display: block;
-    position: absolute;
-    background: #F2EFE9;
-    margin-top: 0.1em;
-}
-
-.desktop-nav li:hover .mobile-menu-realizacje ul {
-    display: block;
-    margin: 10px 20px 15px 0px;
-    padding: 5px;
-    display: flex;
-    flex-flow: column;
-    align-items: flex-start;
-} */
-
 @keyframes fade-in {
     from {
         visibility: hidden;
@@ -328,32 +313,36 @@ label:hover {
 
 #banner {
     background-color: #D7DEE0;
-    padding-top: 11vh;
-    padding-bottom: 11vh;
+    padding: 0 7vw 0 11vw;
 }
 
 .banner-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
 }
 
 .hero-text{
-    flex: 1 1 10rem;
+    width: 450px;
 }
 
 .hero-text h1 {
     font-family: freighttextcmp-pro, serif;
-    margin: 5px 0px 60px 0px;
-    font-size: 60px;
-    line-height: 60px;
+    margin: 2px 0px 45px 0px;
+    font-size: 3.5rem;
+    line-height: 3.75rem;
 }
 
 .banner-container img {
-    flex: 1 1 10rem;
-    height: 35vh;
-    align-self: center;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    align-items: center;
+}
+
+.image {
+    width: 450px;
+    height: 450px;
 }
 
 .zamow-btn {
@@ -367,6 +356,27 @@ label:hover {
 
 .zamow-btn:hover {
     background-color: #F7313B;
+    transition: all ease 0.2s;
+}
+
+@media(max-width:876px) {
+    .image {
+        display: none;
+    }
+
+    #banner {
+        padding: 0px;
+    }
+
+    .banner-container {
+        padding: 10vw 11vw 10vw;
+    }
+
+    .hero-text h1 {
+        font-size: 3.5rem;
+        line-height: 3.7rem;
+        margin: 15px 0px 45px 0px;
+    }
 }
 
 
@@ -475,6 +485,7 @@ h4 a {
 
 .zobacz-btn:hover {
     background-color: #F7313B;
+    transition: all ease 0.2s;
 }
 
 
@@ -563,6 +574,7 @@ h4 a {
 
 .zamow-btn-jak:hover {
     background-color: #F7313B;
+    transition: all ease 0.2s;
 }
 
 
