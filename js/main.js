@@ -24,3 +24,7 @@ btnhamburger.addEventListener('click', function(){
         overlay.classList.add('fade-in');
     }
 });
+
+// Footer date
+
+document.getElementById("js-year").innerHTML = new Date().getFullYear();
