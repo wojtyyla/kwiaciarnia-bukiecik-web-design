@@ -29,6 +29,10 @@ section {
     padding: 0 11vw;
 }
 
+*::before {
+    box-sizing: border-box;
+}
+
 
 /* Navbar */
 
@@ -1065,11 +1069,12 @@ address {
 .text-group {
     text-align: center;
     margin-top: 4rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
     padding: 0 9vw;
 }
 
 .realizacje-page-menu {
+    display: block;
     top: 0; left: 0; right: 0;
     display: flex;
     align-items: center;
@@ -1079,6 +1084,7 @@ address {
     background-color: #F2EFE9;
     padding: 2rem 12vw 2rem 12vw;
     text-align: center;
+    white-space: nowrap;
 }
 
 .realizacje-page-menu li {
@@ -1101,9 +1107,26 @@ address {
 }
 
 .kategoria {
+    position: relative;
     background-color: #D7DEE0;
     margin: 0px 2vw 2.7rem 2vw;
     padding: 3.5vw 4vw 2.2vw 4vw;
+}
+
+.kategoria:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url('/images/illustrations/right-rotate/bukiecik_ilustracje-04.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 3rem;
+    background-position-y: -5.5rem;
+    background-size: cover;
+    width: 33%;
+    height: 100%;
 }
 
 .kategoria-title {
@@ -1129,4 +1152,93 @@ address {
 .kategoria-image img {
     width: 450px;
     height: 450px;
+}
+
+/* @MEDIA QUERIES@ */
+
+@media(min-width: 1700px) {
+    .kategoria:after {
+        background-position-x: 5rem;
+        background-position-y: -9rem;
+        width: 30%;
+ }
+}
+
+@media(max-width: 1050px) {
+    .kategoria:after {
+        background-position-x: 3rem;
+        background-position-y: -4rem;
+        width: 40%;
+ }
+}
+
+@media(max-width: 965px) {
+    .text-group {
+        margin-top: 1.5rem;
+    }
+
+    .realizacje-page-menu {
+        overflow: auto;
+        padding: 1rem 6vw;
+    }
+
+    .menu-scroll {
+        position: relative;
+    }
+
+    .realizacje-page-menu::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: linear-gradient(90deg,transparent,#D7DEE0);
+        background-size: cover;
+        background-position-x: -1.8vw;
+        width: 20%;
+        height: 100%;
+    }
+
+    .realizacje-page-menu li {
+        list-style: none;
+        margin: 0 .8rem;
+    }
+
+    .realizacje-page-menu li a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .kategoria:after {
+        background-position-x: 5rem;
+        background-position-y: -3.5rem;
+        width: 60%;
+ }
+}
+
+@media (max-width: 555px) {
+
+    .kategoria {
+        margin: 0px 2vw 1.5rem 2vw;
+        padding: 5vw 4vw 5vw 4vw;
+    }
+
+    .kategoria:after {
+        background-position-x: 8rem;
+        background-position-y: -2.5rem;
+        width: 70%;
+    }
+}
+
+@media (max-width: 440px) {
+    .kategoria:after {
+        background-position-x: 12.3rem;
+        background-position-y: -.5rem;
+        width: 100%;
+    }
+
+    h1.sub-heading {
+        line-height: 2.2rem;
+    }
 }
