@@ -29,49 +29,75 @@ btnhamburger.addEventListener('click', function(){
 
 document.getElementById("js-year").innerHTML = new Date().getFullYear();
 
-// REALIZACJE PAGE Galeria
+// REALIZACJE PAGES Gallery
 
-const filterItem = document.querySelector(".realizacje-page-menu");
-const filterImg = document.querySelectorAll(".gallery-image");
-
-window.onload = ()=>{
-    filterItem.onclick = (selectedItem)=>{
-      if(selectedItem.target.classList.contains("item")){
-        filterItem.querySelector(".active").classList.remove("active");
-        selectedItem.target.classList.add("active");
-        let filterName = selectedItem.target.getAttribute("data-name");
-        filterImg.forEach((image)=>{
-          let filterImages = image.getAttribute("data-name");
-          if ((filterImages == filterName) || filterName == "all"){
-            image.classList.remove("hide");
-            image.classList.add("show");
-          }else{
-            image.classList.add("hide");
-            image.classList.remove("show");
-          }
-        });
-      }
-    }
-    for (let index = 0; index < filterImg.length; index++) {
-      filterImg[index].setAttribute("onclick", "preview(this)");
-
-    }
-}
-
-const previewBox = document.querySelector(".preview-box"),
+const gallery = document.querySelectorAll(".gallery .gallery-image"),
+previewBox = document.querySelector(".preview-box"),
 previewImg = previewBox.querySelector("img"),
-closeIcon = previewBox.querySelector("i"),
+closeIcon = previewBox.querySelector(".bx.bx-x"),
+currentImg = previewBox.querySelector(".current-img"),
+totalImg = previewBox.querySelector(".total-img"),
 shadow = document.querySelector(".shadow");
 
-function preview(element){
-  let selectedPrevImg = element.querySelector("img").src;
-  previewImg.src = selectedPrevImg;
-  console.log(selectedPrevImg);
-  previewBox.classList.add("show");
-  shadow.classList.add("show");
-  closeIcon.onclick = ()=>{
-    previewBox.classList.remove("show");
-    shadow.classList.remove("show");
+window.onload = ()=>{
+  for (let i = 0; i < gallery.length; i++) {
+    totalImg.textContent = gallery.length;
+    let newIndex = i;
+    let clickImgIndex;
+    gallery[i].onclick = ()=>{
+      clickImgIndex = newIndex;
+      console.log(i);
+      function preview(){
+        currentImg.textContent = newIndex + 1;
+        let selectedImgUrl = gallery[newIndex].querySelector("img").src;
+        previewImg.src = selectedImgUrl;
+      }
+
+      const prevBtn = document.querySelector(".prev");
+      const nextBtn = document.querySelector(".next");
+      if(newIndex == 0){
+        prevBtn.style.display = "none";
+      }
+      if(newIndex >= gallery.length - 1){
+        nextBtn.style.display = "none";
+      }
+      prevBtn.onclick = ()=>{
+        newIndex--;
+        if(newIndex == 0){
+          preview();
+          prevBtn.style.display = "none";
+        }else{
+          preview();
+          nextBtn.style.display = "block";
+        }
+      }
+      nextBtn.onclick = ()=>{
+        newIndex++;
+        if(newIndex >= gallery.length - 1){
+          preview();
+          nextBtn.style.display = "none";
+        }else{
+          preview();
+          prevBtn.style.display = "block";
+        }
+      }
+
+
+      preview();
+      previewBox.classList.add("show");
+      shadow.style.display = "block";
+      document.querySelector("body").style.overflow = "hidden";
+      document.querySelector("html").style.overflow = "hidden";
+      
+      closeIcon.onclick = ()=>{
+        newIndex = clickImgIndex;
+        prevBtn.style.display = "block";
+        nextBtn.style.display = "block";
+        previewBox.classList.remove("show");
+        shadow.style.display = "none";
+        document.querySelector("body").style.overflow = "auto";
+        document.querySelector("html").style.overflow = "auto";
+      }
+    }
   }
 }
-

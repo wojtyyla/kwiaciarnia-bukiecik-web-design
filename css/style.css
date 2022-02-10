@@ -21,12 +21,16 @@ html {
 
 body {
     background: #FDFAF5;
-    min-height: 350vh;
+    min-height: 200vh;
     overflow-x: hidden;
 }
 
 section {
     padding: 0 11vw;
+}
+
+*::before {
+    box-sizing: border-box;
 }
 
 
@@ -1065,15 +1069,12 @@ address {
 .text-group {
     text-align: center;
     margin-top: 4rem;
-<<<<<<< HEAD
-    margin-bottom: 2rem;
-=======
-    margin-bottom: 2.5rem;
->>>>>>> parent of 68beac0 (Realizacje page - horizontal menu add + illustrations responsive)
+    margin-bottom: 1.5rem;
     padding: 0 9vw;
 }
 
 .realizacje-page-menu {
+    display: block;
     top: 0; left: 0; right: 0;
     display: flex;
     align-items: center;
@@ -1083,6 +1084,7 @@ address {
     background-color: #F2EFE9;
     padding: 1.5rem 12vw 1.5rem 12vw;
     text-align: center;
+    white-space: nowrap;
 }
 
 .realizacje-page-menu li {
@@ -1100,14 +1102,31 @@ address {
     color: #F7313B;
 }
 
-.realizacje-page-menu li a span.item.active {
+.realizacje-page-menu span {
     font-weight: 600;
 }
 
 .kategoria {
+    position: relative;
     background-color: #D7DEE0;
-    margin: 0rem 2vw 0rem 2vw;
+    margin: 0px 2vw 1.2rem 2vw;
     padding: 3.5vw 4vw 2.2vw 4vw;
+}
+
+.kategoria:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url('/images/illustrations/bukiecik_ilustracje-04.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 3rem;
+    background-position-y: -5.5rem;
+    background-size: cover;
+    width: 33%;
+    height: 100%;
 }
 
 .kategoria-title {
@@ -1133,41 +1152,46 @@ address {
 .kategoria-image img {
     width: 450px;
     height: 450px;
-<<<<<<< HEAD
 }
 
-.gallery {
+.allabody {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0.625rem 0.625rem 5rem 0.625rem;
+}
+
+.wrapper {
+    max-width: 71.875rem;
+}
+
+.wrapper .gallery {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 1.5rem;
 }
 
-.gallery .gallery-image {
-    padding: 0.6rem;
-    width: calc(100%/4)
+.gallery-image h1 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: .4rem;
 }
 
-.gallery .gallery-image.hide {
-    display: none;
+.gallery-image p {
+    text-align: center;
+    font-size: 0.813rem;
 }
 
-.gallery .gallery-image.show {
-    animation: animate 0.4s ease;
-}
-
-@keyframes animate {
-    0% {
-        transform: scale(0.5);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.gallery .gallery-image span {
+.gallery span {
     display: flex;
     width: 100%;
     overflow: hidden;
+}
+
+.gallery .gallery-image {
+    padding: 0.563rem;
+    width: calc(100% / 4);
 }
 
 .gallery .gallery-image img {
@@ -1182,45 +1206,79 @@ address {
 
 .preview-box {
     position: fixed;
-    z-index: 5;
-    opacity: 0;
-    pointer-events: none;
+    max-width: 37.5rem;
+    width: 100%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
-    background: white;
-    max-width: 40rem;
-    width: 100%;
-    padding: 0 5px 5px 5px;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+    transform: translate(-50%, -50%) scale(0.9);
+    padding: 0 0.313rem 0.313rem 0.313rem;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
 }
 
 .preview-box.show {
     opacity: 1;
     pointer-events: auto;
-    transform: translate(-50%, -50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(1);
     transition: all 0.3s ease;
 }
 
 .preview-box .details {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 13px 15px 13px 10px;
-    justify-content: end;
+    margin-bottom: .5rem;
+    padding: 0.75rem 0.938rem 0.75rem 0.625rem;
+    background: white;
 }
 
-.preview-box .details span i.bx.bx-x {
-    font-weight: 1000;
-    font-size: 2rem;
-    cursor: pointer;  
+.preview-box .details i {
+    color: #000000;
+    cursor: pointer;
+    font-size: 1.5rem;
 }
 
-.preview-box .image-box {
+.details .title {
+    display: flex;
+    font-size: 1.125rem;
+    font-weight: 100;
+}
+
+.details .title p {
+    margin: 0 0.313rem;
+}
+
+.preview-box .img-box {
     display: flex;
     width: 100%;
+    box-shadow: 0rem 0rem 0.938rem rgba(0,0,0,0.2);
+    border: .5px solid rgb(139, 139, 139);
 }
 
-.image-box img {
+.img-box .slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    cursor: pointer;
+    color: white;
+    width: 3.75rem;
+    height: 3.125rem;
+    line-height: 3.125rem;
+    text-align: center;
+    z-index: 3;
+}
+
+.img-box .slide.prev {
+    left: 0;
+}
+
+.img-box .slide.next {
+    right: 0;
+}
+
+.preview-box .img-box img {
     width: 100%;
 }
 
@@ -1231,12 +1289,23 @@ address {
     height: 100%;
     width: 100%;
     display: none;
-    background:rgba(0,0,0,0.4);
-    z-index: 2;
+    background: rgba(0,0,0,0.3);
 }
 
-.shadow.show {
-    display: block;
+.zamow-call-to {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.podobaja h1 {
+    padding: 2rem 0 2rem 0;
+    font-size: 1.563rem;
+    text-align: center;
+}
+
+.zamow-call-to button {
+    padding: 0.9rem 5rem;
+    margin-top: 1rem;
 }
 
 /* @MEDIA QUERIES@ */
@@ -1254,10 +1323,10 @@ address {
         background-position-x: 3rem;
         background-position-y: -4rem;
         width: 40%;
- }
+    }
 
     .gallery .gallery-image {
-        width: calc(100%/3)
+        width: calc(100% / 3);
     }
 }
 
@@ -1284,7 +1353,7 @@ address {
         background: linear-gradient(90deg,transparent,#D7DEE0);
         background-size: cover;
         background-position-x: -1.8vw;
-        width: 20%;
+        width: 15%;
         height: 100%;
     }
 
@@ -1303,11 +1372,11 @@ address {
         background-position-x: 5rem;
         background-position-y: -3.5rem;
         width: 60%;
- }
+    }
 
- .gallery .gallery-image {
-    width: calc(100%/2)
-}
+    .gallery .gallery-image {
+        width: calc(100% / 2);
+    }
 }
 
 @media (max-width: 555px) {
@@ -1324,7 +1393,7 @@ address {
     }
 
     .gallery .gallery-image {
-        width: 100%;
+        width: calc(100% / 1);
     }
 }
 
@@ -1338,6 +1407,4 @@ address {
     h1.sub-heading {
         line-height: 2.2rem;
     }
-=======
->>>>>>> parent of 68beac0 (Realizacje page - horizontal menu add + illustrations responsive)
 }
