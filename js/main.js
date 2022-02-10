@@ -34,7 +34,8 @@ document.getElementById("js-year").innerHTML = new Date().getFullYear();
 const gallery = document.querySelectorAll(".gallery .gallery-image"),
 previewBox = document.querySelector(".preview-box"),
 previewImg = previewBox.querySelector("img"),
-closeIcon = previewBox.querySelector(".bx.bx-x"),
+closeIcon = previewBox.querySelector(".details"),
+closeBody = previewBox.querySelector(".preview-box"),
 currentImg = previewBox.querySelector(".current-img"),
 totalImg = previewBox.querySelector(".total-img"),
 shadow = document.querySelector(".shadow");
@@ -90,6 +91,16 @@ window.onload = ()=>{
       document.querySelector("html").style.overflow = "hidden";
       
       closeIcon.onclick = ()=>{
+        newIndex = clickImgIndex;
+        prevBtn.style.display = "block";
+        nextBtn.style.display = "block";
+        previewBox.classList.remove("show");
+        shadow.style.display = "none";
+        document.querySelector("body").style.overflow = "auto";
+        document.querySelector("html").style.overflow = "auto";
+      }
+
+      closeBody.onclick = ()=>{
         newIndex = clickImgIndex;
         prevBtn.style.display = "block";
         nextBtn.style.display = "block";
