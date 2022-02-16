@@ -1408,6 +1408,10 @@ address {
         line-height: 2.2rem;
     }
 
+    .zamow-call-to {
+        margin-bottom: 10vw;
+    }
+
 }
 
 /* ----------------- ! O NAS PAGE ! ----------------- */
@@ -1487,14 +1491,40 @@ p.rok-obecny {
 
 @media(max-width: 1025px) {
 
+    .text-group {
+        margin-bottom: 3rem;
+    }
+
     .historia-group {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    .historia-group p {
+        margin-top: 1rem;
     }
 
     .story-line {
         display: none;
+    }
+
+    .album-stare2 {
+        order: 1;
+        margin-top: 3rem;
+    }
+
+    .story1 {
+        order: 1;
+        text-align: center;
+    }
+    
+    .story2 {
+        order: 2;
+        text-align: center;
+        margin-bottom: 10vw;;
     }
 
     p.rok-zal {
@@ -1505,10 +1535,12 @@ p.rok-obecny {
         background: none;
         font-weight: 600;
         font-size: 3rem;
-        transform: translate(0%, 0%)
+        transform: translate(0%, 0%);
+        color:#F7313B;
     }
 
     p.rok-obecny {
+        order: 2;
         position: static;
         right: 0%;
         bottom: 0%;
@@ -1516,10 +1548,143 @@ p.rok-obecny {
         background: none;
         font-weight: 600;
         font-size: 3rem;
-        transform: translate(0%, 0%)
+        transform: translate(0%, 0%);
+        color:#F7313B;
     }
 
     .album-stare1 img, .album-stare2 img {
         width: 100%;
+    }
+}
+
+
+/* ----------------- ! KONTAKT PAGE ! ----------------- */
+
+.kontakt-page {
+    margin: 3.5rem 0 1vw 0;
+    display: grid;
+    grid-template: ". . . . image-kwiaciarnia" 0.15fr
+                   "text-group-kontakt text-group-kontakt text-group-kontakt . image-kwiaciarnia" 0.3fr
+                   "bxs-phone text-zadzwon text-zadzwon . image-kwiaciarnia" 0.3fr
+                   "bxs-envelope-open text-email text-email . image-kwiaciarnia" 0.3fr
+                   "bxs-home text-adres text-adres . image-kwiaciarnia" 0.3fr
+                   "text-godziny text-godziny text-godziny . image-kwiaciarnia" 0.1fr
+                   "ponsob ponsob niedz . image-kwiaciarnia" 0.1fr
+                   ". . . . image-kwiaciarnia" 0.15fr /
+                   0.06fr 0.13fr 0.4fr 0.05fr 0.9fr;
+    row-gap: 0.5rem;
+}
+
+.text-group-kontakt {
+    grid-area: text-group-kontakt;
+    margin-bottom: .8rem;
+}
+
+.bx.bxs-phone {
+    grid-area: bxs-phone;
+}
+
+.text-zadzwon {
+    grid-area: text-zadzwon;
+    margin-bottom: .5rem;
+}
+
+.bx.bxs-envelope-open {
+    grid-area: bxs-envelope-open;
+}
+
+.text-email {
+    grid-area: text-email;
+    margin-bottom: .5rem;
+}
+
+.bx.bxs-home {
+    grid-area: bxs-home;
+}
+
+.text-adres {
+    grid-area: text-adres;
+}
+
+.text-godziny {
+    grid-area: text-godziny;
+    margin-top: 1.5rem;
+}
+
+.bx {
+    font-size: 1.4rem;
+    margin-top: .5rem;
+}
+
+.ponsob {
+    grid-area: ponsob;
+}
+
+.niedz {
+    grid-area: niedz;
+}
+
+.image-kwiaciarnia {
+    grid-area: image-kwiaciarnia;
+    background-image: url("/images/social-media/c4f4ce33-5203-479d-8991-71b66d8d6184.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.kontakt-page h2 {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.kontakt-page a {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.kontakt-page p {
+    font-size: 1rem;
+}
+
+.kontakt-page a {
+    color: black;
+}
+
+.kontakt-page a:hover {
+    color: #F7313B;
+}
+
+.kontakt-page span {
+    font-weight: 600;
+}
+
+.google-map h1 {
+    text-align: center;
+    color: #000000;
+}
+
+.google-map img {
+    height: .75rem;
+}
+
+.google-map {
+    padding: 0;
+}
+
+#map {
+    height: 31.25rem;
+    width: 100%;
+}
+
+/* @MEDIA QUERIES@ */
+
+@media(max-width: 1025px) {
+
+    .kontakt-page {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
     }
 }

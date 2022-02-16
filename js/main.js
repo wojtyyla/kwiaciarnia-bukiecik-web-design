@@ -112,3 +112,28 @@ window.onload = ()=>{
     }
   }
 }
+
+// KONTAKT PAGE Smooth Scroll onclick
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e){
+    e.preventDefault();
+    document.querySelector(this.getAttribute(href)).scrollIntoView({
+      behaviour : "smooth"
+    });
+  });
+});
+
+// KONTAKT PAGE Google map
+
+function initMap() {
+  var location = {lat: 51.058577, lng: 16.196339};
+  var map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 16,
+    center: location
+  });
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map
+  });
+}
