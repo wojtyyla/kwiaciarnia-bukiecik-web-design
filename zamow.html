@@ -41,7 +41,7 @@
         
             <a href="/o_nas.html">o nas</a>
             <a href="/kontakt.html">kontakt</a>
-            <a href="/zamow.html"><button class="nav-btn">zamów</button></a>
+            <a href="#"><button class="nav-btn">zamów</button></a>
         </div>
     </div>
 
@@ -80,7 +80,7 @@
             <li><a href="/o_nas.html">o nas</a></li>
             <li><a href="/kontakt.html">kontakt</a></li>
             <li class="zamow">
-                <a href="/zamow.html">
+                <a href="#">
                     <button class="nav-btn">zamów</button>
                 </a>
             </li>
@@ -90,54 +90,88 @@
 
 <main>
 
-<!-- Kontakt -->
+<!-- Zamów -->
 
-<section class="kontakt-page" id="kontakt-page">
+<section class="zaplac-zamowienie" id="zaplac-zamowienie">
 
-    <div class="text-group-kontakt">
-        <h3 class="sub-heading">Kontakt</h3>
-        <h1 class="sub-heading">Skontaktuj się z nami!</h1>
-    </div>
-
-        <i class='bx bxs-phone'></i>
-        <div class="text-zadzwon">
-            <h2>Zadzwoń:</h2>
-            <a href="tel:509-183-669">+48 509 183 669</a>
+        <div class="zamow-title">
+            <h1>Zapłać za zamówienie</h1>
+            <p>Wprowadź tytuł podany podczas rozmowy oraz ustaloną kwotę, następnie kliknij w przycisk “zapłać online”,<br> aby dokonać płatności za zamówienie. Chcesz złożyć zamówienie? Zadzwoń do nas.<br>Więcej informacji jak zamówić, znajduje się poniżej.</p>
         </div>
         
-        <i class='bx bxs-envelope-open'></i>
-        <div class="text-email">
-            <h2>Wyślij email:</h2>
-            <a href="mailto:kwiaciarnia@bukiecik.eu">kwiaciarnia@bukiecik.eu</a>
-         </div>
-
-        <i class='bx bxs-home'></i>
-        <div class="text-adres">
-            <h2>Odwiedź nasz sklep:</h2>
-            <a href="https://www.google.com/maps/place/Kwiaciarnia+Bukiecik/@51.0585323,16.1941699,17z/data=!3m1!4b1!4m5!3m4!1s0x470f05f9d939d67d:0x951679f8ec41ff35!8m2!3d51.0585254!4d16.1963563"><address>ul. Kuziennicza 32<br>59-400, Jawor</address></a>
+        <div class="forms">
+            <form>
+                <input type="text" placeholder="Twoje imię i nazwisko">
+                <input type="text" placeholder="Kwota">
+                <button class="zaplac">zapłać online</button>
+            </form>
+            <a href="#"><h1 class="sub-heading">Dowiedz się jak zamówić! <img class="chevron-nav" src="/images/svg/chevron-down.svg" alt="chevron-down"></h1></a>
         </div>
-
-    <div class="text-godziny">
-        <h2>Godziny otwarcia:</h2>
-    </div>
-    <div class="ponsob">
-        <p><span>Pon. - Sob.</span><br>8:00 - 20:00</p>
-    </div>
-    <div class="niedz">
-        <p><span>Niedziela</span><br>9:00 - 17:00</p>
-    </div>
-
-    <div class="image-kwiaciarnia"></div>
 
 </section>
 
-<section class="google-map">
+<section class="jak-zlozyc" id="jak-zlozyc">
 
-    <a href="#map"><h1 class="sub-heading">Sprawdź lokalizację sklepu na mapie <img class="chevron-nav" src="/images/svg/chevron-down.svg" alt="chevron-down"></h1></a>
+    <div class="box-kroki">
 
-    <div class="map" id="map">
-        
+        <div class="box">
+            <img class="wybierz" src="/images/illustrations/bukiecik_ilustracje-14.svg" alt="komp-flor">
+            <h3>1. Wybierz</h3>
+            <p class="down">Określ <span>okazję</span> oraz <span>kwotę</span> za jaką mamy wykonać kompozycję florystyczną.<br>
+            A my zaproponujemy najlepsze rozwiązanie!</p>
+        </div>
+
+        <div class="chevron-kroki">
+            <img src="/images/svg/chevron-right.svg" alt="chevron-kroki">
+        </div>
+
+        <div class="box">
+            <img src="/images/illustrations/bukiecik_ilustracje-13.svg" alt="komp-flor">
+            <h3>2. Zadzwoń</h3>
+            <h4><a href="tel:509-183-669">+48 509 183 669</a></h4>
+            <p>Aby zamówić, podając nam <span>informacje kontatkowe odbiorcy</span> i wybierając <span>dostawę</span> bądź <span>odbiór osobisty.</span></p>
+        </div>
+
+        <div class="chevron-kroki">
+            <img src="/images/svg/chevron-right.svg" alt="chevron-kroki">
+        </div>
+
+        <div class="box">
+            <img src="/images/illustrations/bukiecik_ilustracje-12.svg" alt="komp-flor">
+            <h3>3. Zapłać</h3>
+            <p class="down"> Dokonaj płatności <span>online</span> przez naszą stronę lub zapłać <span>na miejscu</span> przy odbiorze lub przed dostawą.</p>
+        </div>
     </div>
+
+</section>
+
+<section class="dostawa" id="dostawa">
+
+    <div class="heading-dostawa">
+        <h3 class="sub-heading">Dostawa</h3>
+        <h1 class="sub-heading">Gdzie dostarczamy</h1>
+    </div>
+
+        <i class='bx bxs-phone'></i>
+        <div class="jawor">
+            <h2>dostawa</h2>
+            <p>cena</p>
+        </div>
+        
+        <i class='bx bxs-envelope-open'></i>
+        <div class="poza-jawor">
+            <h2>dostawa</h2>
+            <p>cena</p>
+         </div>
+
+        <i class='bx bxs-home'></i>
+        <div class="na-pogrzeb">
+            <h2>Dostawa</h2>
+            <p>cena</p>
+        </div>
+
+    <div class="mapa-dostaw"></div>
+
 </section>
 
 <!-- Footer -->

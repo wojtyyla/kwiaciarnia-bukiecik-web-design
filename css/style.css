@@ -451,9 +451,36 @@ h4 a {
 }
 
 .grid-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: 100%;
     transition: .5s;
+}
+
+.grid-img.bukiet {
+    background-image: url("/images/social-media/WOJ09666.jpg");
+}
+
+.grid-img.pogrzebowe {
+    background-image: url("/images/social-media/c4f4ce33-5203-479d-8991-71b66d8d6184.jpg");
+}
+
+.grid-img.slubne {
+    background-image: url("/images/social-media/9e05895a-884a-4b13-8239-ad260e3ad286.JPG");
+}
+.grid-img.flowerboxy {
+    background-image: url("/images/social-media/c72eb92e-fbe0-417c-8cd7-8717c61f051b.JPG");
+}
+.grid-img.koszekwiatow {
+    background-image: url("/images/social-media/68580c56-496d-4f74-9315-4f36b98d608b.jpg");
+}
+.grid-img.rosliny {
+    background-image: url("/images/social-media/8754a5ac-6d85-4b98-86e7-7f1eba2678fb.jpg");
+}
+.grid-img.lasywszkle {
+    background-image: url("/images/social-media/5c695b8b-5a9a-45c6-ad2b-c0298d78c831.jpg");
 }
 
 .grid-img:hover {
@@ -493,7 +520,7 @@ h4 a {
     width: 100%;
     left: 0px;
     bottom: 0px;
-    /* background-image: linear-gradient(to bottom,transparent, #D7DEE0); */
+    background-image: linear-gradient(to bottom,transparent, #D7DEE0);
     padding: 29px 17px 17px;
     transition: .5s;
 }
@@ -524,20 +551,25 @@ h4 a {
         flex-direction: column;
         height: 300vh;
     }
+
+    .grid-img {
+        width: 100vw;
+        height: 100vw;
+    }
 }
 
 @media(max-width: 700px) {
 
     .realizacje {
         padding-top: 4.5vw;
-        padding-bottom: 6vw;
+        padding-bottom: 10vw;
     }
 }
 
 @media(max-width: 450px) {
 
     .realizacje {
-        padding-top: 6.5vw;
+        padding-top: 10vw;
         padding-left: 5vw;
         padding-right: 5vw;
     }
@@ -552,6 +584,7 @@ h4 a {
     color: white;
     text-align: center;
     padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 .jak-zlozyc .box-kroki {
@@ -577,7 +610,7 @@ h4 a {
 }
 
 .heading-zamowienie {
-    padding: 2rem 0 2rem 0;
+    padding: 0 0 2rem 0;
     font-size: 25px;
     text-align: center;
 }
@@ -844,8 +877,8 @@ p.imie {
 
     .grid-box-social:nth-child(2) {
         align-self: stretch;
-        height: 50vh;
-        width: 36vw;
+        width: 46.9%;
+        height: 40vh;
         margin: 0px;
         object-fit: fill;
     }
@@ -858,8 +891,8 @@ p.imie {
 
     .grid-box-social:nth-child(4) {
         align-self: stretch;
-        height: 50vh;
-        width: 36vw;
+        width: 46.9%;
+        height: 40vh;
         margin: 0px;
         object-fit: fill;
     }
@@ -883,13 +916,13 @@ p.imie {
 @media(max-width: 450px) {
 
     #social-media {
-        padding-top: 6.5vw;
+        padding-top: 10vw;
         padding-left: 5vw;
         padding-right: 5vw;
     }
 
     .box-social {
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 }
 
@@ -1557,11 +1590,19 @@ p.rok-obecny {
     }
 }
 
+@media(max-width: 450px) {
+
+    .o_nas-page {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+}
+
 
 /* ----------------- ! KONTAKT PAGE ! ----------------- */
 
 .kontakt-page {
-    margin: 3.5rem 0 1vw 0;
+    margin: 3.5rem 0 .5rem 0;
     display: grid;
     grid-template: ". . . . image-kwiaciarnia" 0.15fr
                    "text-group-kontakt text-group-kontakt text-group-kontakt . image-kwiaciarnia" 0.3fr
@@ -1611,7 +1652,7 @@ p.rok-obecny {
     margin-top: 1.5rem;
 }
 
-.bx {
+.kontakt-page .bx {
     font-size: 1.4rem;
     margin-top: .5rem;
 }
@@ -1626,7 +1667,7 @@ p.rok-obecny {
 
 .image-kwiaciarnia {
     grid-area: image-kwiaciarnia;
-    background-image: url("/images/social-media/c4f4ce33-5203-479d-8991-71b66d8d6184.jpg");
+    background-image: url("/images/social-media/WOJ09666.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1661,6 +1702,7 @@ p.rok-obecny {
 .google-map h1 {
     text-align: center;
     color: #000000;
+    margin-bottom: 1.5rem;
 }
 
 .google-map img {
@@ -1682,9 +1724,231 @@ p.rok-obecny {
 
     .kontakt-page {
         display: flex;
-        flex-wrap: wrap;
+        flex-flow: column;
         justify-content: center;
-        margin-top: 0rem;
-        margin-bottom: 0rem;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+        row-gap: 0rem;
+    }
+    
+    .text-group-kontakt, .text-zadzwon, .text-email, .text-adres, .text-godziny, .kontakt-page .bx, .ponsob, .niedz {
+        text-align: center;
+    }
+
+    .text-zadzwon, .text-email, .text-adres, .kontakt-page .bx {
+        background-color:#F2EFE9;
+        padding: 1rem;
+    }
+
+    .kontakt-page .bx {
+        font-size: 2rem;
+    }
+
+    .text-zadzwon, .text-email, .text-adres {
+        padding-top: 0rem;
+    }
+
+    .image-kwiaciarnia {
+        order: 1;
+        background-image: url("/images/social-media/WOJ09666.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 60vw;
+        height: 40vh;
+        align-self: center;
+        margin-top: 2rem;
+    }
+
+}
+
+@media(max-width: 450px) {
+
+    .kontakt-page {
+        padding: 0 5vw;
+    }
+
+    .image-kwiaciarnia {
+        order: 0;
+        background-image: url("/images/social-media/WOJ09666.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 80vw;
+        height: 30vh;
+        align-self: center;
+    }
+}
+
+/* ----------------- ! ZAMÓW PAGE ! ----------------- */
+
+/* Zapłać formularz */
+
+.zamow-title h1 {
+    font-size: 3.2rem;
+}
+
+.zamow-title p {
+    font-size: 0.813rem;
+}
+
+button.zaplac {
+    font-size: 19px;
+    color: white;
+    background-color: black;
+    padding: 0.9rem 2rem;
+    margin-top: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.forms h1 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+.forms img {
+    height: .75rem;
+}
+
+/* Dostawa cennik */
+
+.dostawa {
+    margin: 3.5rem 0 .5rem 0;
+    display: grid;
+    grid-template: ". . . . image-kwiaciarnia" 0.15fr
+                   "heading-dostawa heading-dostawa heading-dostawa . image-kwiaciarnia" 0.3fr
+                   "bxs-phone jawor jawor . image-kwiaciarnia" 0.3fr
+                   "bxs-envelope-open poza-jawor poza-jawor . image-kwiaciarnia" 0.3fr
+                   "bxs-home na-pogrzeb na-pogrzeb . image-kwiaciarnia" 0.3fr
+                   "text-godziny text-godziny text-godziny . image-kwiaciarnia" 0.1fr
+                   "ponsob ponsob niedz . image-kwiaciarnia" 0.1fr
+                   ". . . . image-kwiaciarnia" 0.15fr /
+                   0.06fr 0.13fr 0.4fr 0.05fr 0.9fr;
+    row-gap: 0.5rem;
+}
+
+.heading-dostawa {
+    grid-area: heading-dostawa;
+    margin-bottom: .8rem;
+}
+
+.bx.bxs-phone {
+    grid-area: bxs-phone;
+}
+
+.jawor {
+    grid-area: jawor;
+    margin-bottom: .5rem;
+}
+
+.bx.bxs-envelope-open {
+    grid-area: bxs-envelope-open;
+}
+
+.poza-jawor {
+    grid-area: poza-jawor;
+    margin-bottom: .5rem;
+}
+
+.bx.bxs-home {
+    grid-area: bxs-home;
+}
+
+.na-pogrzeb {
+    grid-area: na-pogrzeb;
+}
+
+.dostawa .bx {
+    font-size: 1.4rem;
+    margin-top: .5rem;
+}
+
+.mapa-dostaw {
+    grid-area: image-kwiaciarnia;
+    background-image: url("/images/social-media/WOJ09666.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dostawa h2 {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.dostawa a {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.dostawa p {
+    font-size: 1rem;
+}
+
+.dostawa span {
+    font-weight: 600;
+}
+
+/* @MEDIA QUERIES@ */
+
+@media(max-width: 1025px) {
+
+    .dostawa {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+        row-gap: 0rem;
+    }
+    
+    .heading-dostawa, .jawor, .poza-jawor, .na-pogrzeb, .dostawa .bx {
+        text-align: center;
+    }
+
+    .jawor, .poza-jawor, .na-pogrzeb, .dostawa .bx {
+        background-color:#F2EFE9;
+        padding: 1rem;
+    }
+
+    .dostawa .bx {
+        font-size: 2rem;
+    }
+
+    .jawor, .poza-jawor, .na-pogrzeb {
+        padding-top: 0rem;
+    }
+
+    .mapa-dostaw {
+        order: 1;
+        background-image: url("/images/social-media/WOJ09666.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 60vw;
+        height: 40vh;
+        align-self: center;
+        margin-top: 2rem;
+    }
+
+}
+
+@media(max-width: 450px) {
+
+    .dostawa {
+        padding: 0 5vw;
+    }
+
+    .mapa-dostaw {
+        order: 0;
+        background-image: url("/images/social-media/WOJ09666.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 80vw;
+        height: 30vh;
+        align-self: center;
     }
 }
