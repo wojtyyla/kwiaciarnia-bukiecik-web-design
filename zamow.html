@@ -96,17 +96,28 @@
 
         <div class="zamow-title">
             <h1>Zapłać za zamówienie</h1>
-            <p>Wprowadź tytuł podany podczas rozmowy oraz ustaloną kwotę, następnie kliknij w przycisk “zapłać online”,<br> aby dokonać płatności za zamówienie. Chcesz złożyć zamówienie? Zadzwoń do nas.<br>Więcej informacji jak zamówić, znajduje się poniżej.</p>
+            <p>Wprowadź tytuł podany podczas rozmowy oraz ustaloną kwotę, następnie kliknij w przycisk “zapłać online”, aby dokonać płatności za zamówienie. Chcesz złożyć zamówienie? Zadzwoń do nas.<br>Więcej informacji jak zamówić, znajduje się poniżej.</p>
         </div>
         
         <div class="forms">
-            <form>
-                <input type="text" placeholder="Twoje imię i nazwisko">
-                <input type="text" placeholder="Kwota">
-                <button class="zaplac">zapłać online</button>
+            <form action="https://ssl.dotpay.pl/test_payment/" target="_blank" method="POST">
+                <div class="input-1">
+                    <div class="pay-money">Kwota [PLN]:</div>
+                    <input type="text" name="kwota" placeholder="00,00" class="input-kwota" size="5">
+                </div>
+                <div class="input-2">
+                    <div class="pay-type">Tytuł zamówienia: </div>
+                    <input type="text" name="opis" placeholder="bukiet z róż z dowozem"  class="input-nazwa" size="25">
+                </div>
+                <div class="button-ok">
+                    <input type="submit" name="Zapłać / Pay" class="sub-ok" value="zapłać online">
+                </div>
             </form>
-            <a href="#"><h1 class="sub-heading">Dowiedz się jak zamówić! <img class="chevron-nav" src="/images/svg/chevron-down.svg" alt="chevron-down"></h1></a>
+
         </div>
+
+            <a href="#jak-zlozyc"><h1 class="sub-heading">Dowiedz się jak zamówić! <img class="chevron-nav" src="/images/svg/chevron-down.svg" alt="chevron-down"></h1></a>
+        
 
 </section>
 
@@ -149,28 +160,41 @@
 
     <div class="heading-dostawa">
         <h3 class="sub-heading">Dostawa</h3>
-        <h1 class="sub-heading">Gdzie dostarczamy</h1>
+        <h1 class="sub-heading">Gdzie dostarczamy?</h1>
     </div>
 
         <i class='bx bxs-phone'></i>
         <div class="jawor">
-            <h2>dostawa</h2>
-            <p>cena</p>
+            <h2>Na terenie Jawora</h2>
+            <p>20zł</p>
         </div>
         
         <i class='bx bxs-envelope-open'></i>
         <div class="poza-jawor">
-            <h2>dostawa</h2>
-            <p>cena</p>
+            <h2>Poza Jaworem</h2>
+            <p>Cena do ustalenia indywidualnie</p>
          </div>
 
         <i class='bx bxs-home'></i>
         <div class="na-pogrzeb">
-            <h2>Dostawa</h2>
-            <p>cena</p>
+            <h2>Dostawa na pogrzeb</h2>
+            <p>Cena do ustalenia indywidualnie</p>
         </div>
 
     <div class="mapa-dostaw"></div>
+
+</section>
+
+<section class="info-dostawa" id="info-dostawa">
+
+    <h3 class="sub-heading">Regulamin</h3>
+    <h1 class="sub-heading">Informacje i zasady dostawy</h1>
+    <p class="text-info">Zrobimy co w naszej mocy, aby dostarczyć Twoje zamówienie jednakże, nie ponosimy odpowiedzialności w przypadku gdy:<br></p>
+
+    <p class="dots-e">&#149;  we wskazanym czasie dostawy odbiorca był nieobecny pod wskazanym adresem dostawy,<br>
+    &#149;  odbiorca odmówił przyjęcia zamówienia,<br></p>
+    
+    <p class="text-info">W tych okolicznościach zamówienie jest zwracane do sklepu. Masz możliwość odebrania zamówienia w naszej kwiaciarni (ul. Kuziennicza 32, 59-400 Jawor). Możemy zrealizować dostawę powtórnie w przypadku dodatkowej opłaty za dostawę. Przy nieudanej dostawie i nieodebrania zamówiania w kwiaciarni - koszt nie podlega zwrotowi. </p>
 
 </section>
 
@@ -207,7 +231,7 @@
         <div class="footer-adres">
             <div class="adres-foot">
                 <h2>Adres</h2>
-                <a href="https://www.google.com/maps/place/Kwiaciarnia+Bukiecik/@51.0585323,16.1941699,17z/data=!3m1!4b1!4m5!3m4!1s0x470f05f9d939d67d:0x951679f8ec41ff35!8m2!3d51.0585254!4d16.1963563"><address>ul. Kuziennicza 32<br>59-400, Jawor</address></a>
+                <a href="https://www.google.com/maps/place/Kwiaciarnia+Bukiecik/@51.0585323,16.1941699,17z/data=!3m1!4b1!4m5!3m4!1s0x470f05f9d939d67d:0x951679f8ec41ff35!8m2!3d51.0585254!4d16.1963563" target="_blank"><address>ul. Kuziennicza 32<br>59-400, Jawor</address></a>
             </div>
             <div class="godziny-foot">
                 <h2>Godziny otwarcia</h2>
@@ -220,10 +244,10 @@
 
         <div class="footer-social-media-copy">
             <h2>Obserwuj nas!</h2>
-            <a href="#">
+            <a href="https://www.facebook.com/kwiaciarnia.jawor/" target="_blank">
                 <i class='bx bxl-facebook-square'></i>
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/bukiecik_wjaworze/" target="_blank">
                 <i class='bx bxl-instagram-alt'></i>
             </a>
             <div class="footer-copyright">

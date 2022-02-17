@@ -1784,48 +1784,100 @@ p.rok-obecny {
 
 /* Zapłać formularz */
 
+.zamow-title {
+    margin-top: 4rem;
+}
+
 .zamow-title h1 {
     font-size: 3.2rem;
 }
 
 .zamow-title p {
     font-size: 0.813rem;
+    margin-bottom: 2rem;
+    margin-right: 15rem;
 }
 
-button.zaplac {
-    font-size: 19px;
+form {
+    display: grid;
+    grid-template: "input-2 button-ok"1fr
+                   "input-1 button-ok"1fr/
+                   1fr 1fr;
+    column-gap: 2%;
+}
+
+.input-1 {
+    grid-area: input-1;
+}
+
+.input-2 {
+    grid-area: input-2;
+}
+
+.button-ok {
+    grid-area: button-ok;
+    align-self: center;
+    justify-self: center;
+}
+
+input.input-kwota {
+    font-size: 1.188rem;
+    padding: 1.2rem 1.6rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color:#F2EFE9;
+}
+
+input.input-nazwa {
+    font-size: 1.188rem;
+    padding: 1.2rem 2rem 1.2rem 2rem;
+    background-color:#F2EFE9;
+}
+
+input.input-nazwa:focus {
+    border: 0.07rem solid rgb(168, 168, 168);
+}
+
+input.input-kwota:focus {
+    border: 0.07rem solid rgb(168, 168, 168);
+}
+
+input.sub-ok {
+    font-size: 1.188rem;
     color: white;
     background-color: black;
-    padding: 0.9rem 2rem;
-    margin-top: 1rem;
+    padding: 0.9rem 3rem;
     border-radius: 3px;
     cursor: pointer;
 }
 
-.forms h1 {
+input.sub-ok:hover {
+    background-color: #F7313B;
+    transition: all ease 0.2s;
+}
+
+.zaplac-zamowienie h1.sub-heading {
     text-align: center;
     color: #000000;
     margin-bottom: 1.5rem;
 }
 
-.forms img {
+.zaplac-zamowienie img.chevron-nav {
     height: .75rem;
 }
 
 /* Dostawa cennik */
 
 .dostawa {
-    margin: 3.5rem 0 .5rem 0;
+    margin: 3.5rem 0 3rem 0;
     display: grid;
-    grid-template: ". . . . image-kwiaciarnia" 0.15fr
-                   "heading-dostawa heading-dostawa heading-dostawa . image-kwiaciarnia" 0.3fr
-                   "bxs-phone jawor jawor . image-kwiaciarnia" 0.3fr
-                   "bxs-envelope-open poza-jawor poza-jawor . image-kwiaciarnia" 0.3fr
-                   "bxs-home na-pogrzeb na-pogrzeb . image-kwiaciarnia" 0.3fr
-                   "text-godziny text-godziny text-godziny . image-kwiaciarnia" 0.1fr
-                   "ponsob ponsob niedz . image-kwiaciarnia" 0.1fr
-                   ". . . . image-kwiaciarnia" 0.15fr /
-                   0.06fr 0.13fr 0.4fr 0.05fr 0.9fr;
+    grid-template: "image-kwiaciarnia . . . . " 0.7fr
+                   "image-kwiaciarnia . heading-dostawa heading-dostawa heading-dostawa" 0.3fr
+                   "image-kwiaciarnia . bxs-phone jawor jawor" 0.3fr
+                   "image-kwiaciarnia . bxs-envelope-open poza-jawor poza-jawor" 0.3fr
+                   "image-kwiaciarnia . bxs-home na-pogrzeb na-pogrzeb" 0.3fr
+                   "image-kwiaciarnia . . . ." 0.7fr /
+                   0.9fr 0.1fr 0.08fr 0.6fr;
     row-gap: 0.5rem;
 }
 
@@ -1867,14 +1919,14 @@ button.zaplac {
 
 .mapa-dostaw {
     grid-area: image-kwiaciarnia;
-    background-image: url("/images/social-media/WOJ09666.jpg");
+    background-image: url("/images/social-media/WOJ09668.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .dostawa h2 {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 400;
 }
 
@@ -1884,23 +1936,77 @@ button.zaplac {
 }
 
 .dostawa p {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
 .dostawa span {
     font-weight: 600;
 }
 
+.info-dostawa {
+    margin-bottom: 3rem;
+}
+
+.text-info {
+    margin: 2rem 0;
+}
+
+.dots-e {
+    margin: 1.5rem 1rem 1.5rem 1rem;
+}
+
 /* @MEDIA QUERIES@ */
 
-@media(max-width: 1025px) {
+@media(max-width: 965px) {
+
+    .zamow-title {
+        margin-top: .5rem;
+    }
+
+    .zamow-title p {
+        margin-right: 0;
+    }
+
+}
+
+@media(max-width: 865px) {
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: column;
+    }
+
+    .zamow-title h1 {
+        font-size: 2.5rem;
+        line-height: 2.7rem;
+        margin-bottom: .5rem;
+    }
+
+    .input-1 {
+        order: 1;
+        margin-top: 1rem;
+    }
+
+    input.input-kwota {
+        margin-bottom: 1.5rem;
+    }
+
+    .button-ok {
+        order: 1;
+    }
+
+    input.sub-ok {
+        margin-bottom: 2rem;
+    }
 
     .dostawa {
         display: flex;
         flex-flow: column;
         justify-content: center;
-        margin-top: 1.5rem;
-        margin-bottom: 2rem;
+        margin-top: 3.5rem;
+        margin-bottom: 4rem;
         row-gap: 0rem;
     }
     
@@ -1909,20 +2015,14 @@ button.zaplac {
     }
 
     .jawor, .poza-jawor, .na-pogrzeb, .dostawa .bx {
-        background-color:#F2EFE9;
-        padding: 1rem;
+        order: 1;
     }
 
     .dostawa .bx {
         font-size: 2rem;
     }
 
-    .jawor, .poza-jawor, .na-pogrzeb {
-        padding-top: 0rem;
-    }
-
     .mapa-dostaw {
-        order: 1;
         background-image: url("/images/social-media/WOJ09666.jpg");
         background-position: center;
         background-repeat: no-repeat;
@@ -1930,12 +2030,16 @@ button.zaplac {
         width: 60vw;
         height: 40vh;
         align-self: center;
-        margin-top: 2rem;
+        margin-bottom: 1rem;
     }
 
 }
 
 @media(max-width: 450px) {
+
+    .zaplac-zamowienie {
+        padding: 0 5vw;
+    }
 
     .dostawa {
         padding: 0 5vw;
@@ -1950,5 +2054,9 @@ button.zaplac {
         width: 80vw;
         height: 30vh;
         align-self: center;
+    }
+
+    .info-dostawa {
+        padding: 0 5vw;
     }
 }
