@@ -1139,14 +1139,16 @@ address {
     font-weight: 600;
 }
 
-.kategoria {
+/* ! BUKIETY ! */
+
+.kategoria-bukiety {
     position: relative;
     background-color: #D7DEE0;
     margin: 0px 2vw 1.2rem 2vw;
     padding: 3.5vw 4vw 2.2vw 4vw;
 }
 
-.kategoria:after {
+.kategoria-bukiety:after {
     content: '';
     display: block;
     position: absolute;
@@ -1174,17 +1176,29 @@ address {
    margin-right: 40vw;
 }
 
-.kategoria-image {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    align-items: center;
-    right: -150px;
+/* ! ROŚLINY ! */
+
+.kategoria-rosliny {
+    position: relative;
+    background-color: #D7DEE0;
+    margin: 0px 2vw 1.2rem 2vw;
+    padding: 3.5vw 4vw 2.2vw 4vw;
 }
 
-.kategoria-image img {
-    width: 450px;
-    height: 450px;
+.kategoria-rosliny:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url('/images/illustrations/bukiecik_ilustracje-08.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 1rem;
+    background-position-y: -6.5rem;
+    background-size: cover;
+    width: 32%;
+    height: 100%;
 }
 
 .allabody {
@@ -1344,18 +1358,32 @@ address {
 /* @MEDIA QUERIES@ */
 
 @media(min-width: 1700px) {
-    .kategoria:after {
+
+    .kategoria-bukiety:after {
         background-position-x: 5rem;
         background-position-y: -9rem;
         width: 30%;
- }
+    }
+
+    .kategoria-rosliny:after {
+        background-position-x: 1rem;
+        background-position-y: -7rem;
+        width: 25%;
+    }
 }
 
 @media(max-width: 1050px) {
-    .kategoria:after {
+
+    .kategoria-bukiety:after {
         background-position-x: 3rem;
         background-position-y: -4rem;
         width: 40%;
+    }
+
+    .kategoria-rosliny:after {
+        background-position-x: 1rem;
+        background-position-y: -6rem;
+        width: 39%;
     }
 
     .gallery .gallery-image {
@@ -1401,10 +1429,17 @@ address {
 }
 
 @media (max-width: 750px) {
-    .kategoria:after {
+
+    .kategoria-bukiety:after {
         background-position-x: 5rem;
         background-position-y: -3.5rem;
         width: 60%;
+    }
+
+    .kategoria-rosliny:after {
+        background-position-x: 2rem;
+        background-position-y: -3.5rem;
+        width: 50%;
     }
 
     .gallery .gallery-image {
@@ -1414,14 +1449,25 @@ address {
 
 @media (max-width: 555px) {
 
-    .kategoria {
+    .kategoria-bukiety {
         margin: 0px 2vw 1.5rem 2vw;
         padding: 5vw 4vw 5vw 4vw;
     }
 
-    .kategoria:after {
+    .kategoria-bukiety:after {
         background-position-x: 8rem;
         background-position-y: -2.5rem;
+        width: 70%;
+    }
+
+    .kategoria-rosliny {
+        margin: 0px 2vw 1.5rem 2vw;
+        padding: 5vw 4vw 5vw 4vw;
+    }
+
+    .kategoria-rosliny:after {
+        background-position-x: 7rem;
+        background-position-y: -4.5rem;
         width: 70%;
     }
 
@@ -1431,10 +1477,17 @@ address {
 }
 
 @media (max-width: 440px) {
-    .kategoria:after {
+
+    .kategoria-bukiety:after {
         background-position-x: 12.3rem;
         background-position-y: -.5rem;
         width: 100%;
+    }
+
+    .kategoria-rosliny:after {
+        background-position-x: 9.3rem;
+        background-position-y: -1.5rem;
+        width: 90%;
     }
 
     h1.sub-heading {
@@ -1785,7 +1838,7 @@ p.rok-obecny {
 /* Zapłać formularz */
 
 .zamow-title {
-    margin-top: 4rem;
+    margin-top: 3.5rem;
 }
 
 .zamow-title h1 {
@@ -1794,7 +1847,7 @@ p.rok-obecny {
 
 .zamow-title p {
     font-size: 0.813rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     margin-right: 15rem;
 }
 
@@ -1817,29 +1870,33 @@ form {
 .button-ok {
     grid-area: button-ok;
     align-self: center;
-    justify-self: center;
+    justify-self: start;
 }
 
 input.input-kwota {
     font-size: 1.188rem;
     padding: 1.2rem 1.6rem;
     text-align: center;
+    margin-top: .5rem;
     margin-bottom: 2rem;
     background-color:#F2EFE9;
+    border: 0.1rem solid transparent;
 }
 
 input.input-nazwa {
     font-size: 1.188rem;
     padding: 1.2rem 2rem 1.2rem 2rem;
+    margin-top: .5rem;
     background-color:#F2EFE9;
+    border: 0.1rem solid transparent;
 }
 
 input.input-nazwa:focus {
-    border: 0.07rem solid rgb(168, 168, 168);
+    border: 0.1rem solid rgb(190, 190, 190);
 }
 
 input.input-kwota:focus {
-    border: 0.07rem solid rgb(168, 168, 168);
+    border: 0.1rem solid rgb(190, 190, 190);
 }
 
 input.sub-ok {
