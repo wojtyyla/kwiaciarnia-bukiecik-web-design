@@ -694,7 +694,7 @@ h4 a {
     grid-gap: 18px;
 }
 
-.grid-box-social:nth-child(1) {
+.grid-box-social-1:nth-child(1) {
     grid-area: 1 / 1 / 4 / 4;
 }
 
@@ -702,7 +702,7 @@ h4 a {
     grid-area: 2 / 4 / 5 / 5;
 }
 
-.grid-box-social:nth-child(3) {
+.grid-box-social-2:nth-child(3) {
     grid-area: 2 / 5 / 5 / 8;
 }
 
@@ -727,20 +727,48 @@ h4 a {
     height: 100%;
 }
 
-.box-social img:hover {
-    transform: scale(1.05);
-    opacity: 85%;
-}
-
 .grid-box-social {
-    overflow: hidden;
     position: relative;
 }
 
-.grid-box-social img {
-    width: 100%;
-    height: 100%;
-    transition: .5s;
+.grid-box-social.ig::after {
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    color: #fff;
+    text-align: center;
+    background-image: url(/images/svg/bxl-instagram-alt.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid-box-social.ig:hover::after {
+    opacity: 1;
+}
+
+.grid-box-social.fb::after {
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    color: #fff;
+    text-align: center;
+    background-image: url(/images/svg/bxl-facebook-square.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid-box-social.fb:hover::after {
+    opacity: 1;
 }
 
 h3.social {
@@ -871,7 +899,7 @@ p.imie {
         height: fit-content;
     }
 
-    .grid-box-social:nth-child(1) {
+    .grid-box-social-1:nth-child(1) {
         align-self: flex-start;
     }
 
@@ -883,7 +911,7 @@ p.imie {
         object-fit: fill;
     }
 
-    .grid-box-social:nth-child(3) {
+    .grid-box-social-2:nth-child(3) {
         align-self: flex-start;
         text-align: center;
         order: 1;
