@@ -23,6 +23,7 @@ body {
     background: #FDFAF5;
     min-height: 200vh;
     overflow-x: hidden;
+    color: #000000;
 }
 
 section {
@@ -460,7 +461,10 @@ h4 a {
 }
 
 .grid-img.bukiet {
-    background-image: url("/images/social-media/");
+    background-position: 5rem;
+    background-size: 35rem;
+    background-image: url("/images/realizacje/bukiety/bukiet-1.jpg");
+    background-color: #dfe4e7;
 }
 
 .grid-img.pogrzebowe {
@@ -470,17 +474,30 @@ h4 a {
 .grid-img.slubne {
     background-image: url("/images/social-media/");
 }
+
 .grid-img.flowerboxy {
-    background-image: url("/images/social-media/");
+    background-position: 3rem;
+    background-size: 18rem;
+    background-image: url("/images/realizacje/flowerboxy/box-2.jpg");
+    background-color: #dfe4e7;
 }
+
 .grid-img.koszekwiatow {
     background-image: url("/images/social-media/");
 }
+
 .grid-img.rosliny {
-    background-image: url("/images/social-media/");
+    background-position: 10rem;
+    background-size: 20rem;
+    background-image: url("/images/realizacje/rosliny/rosliny-4.jpg");
+    background-color: #dfe4e7;
 }
+
 .grid-img.lasywszkle {
-    background-image: url("/images/social-media/");
+    background-position: 15rem;
+    background-size: 20rem;
+    background-image: url("/images/realizacje/lasywszkle/las-4.jpg");
+    background-color: #dce1e5;
 }
 
 .grid-img:hover {
@@ -822,7 +839,7 @@ h2.social {
 
 p.social-small {
     font-size: 13px;
-    border: 1px solid #F7313B;
+    border: .1rem solid #F7313B;
     border-radius: 5px;
     padding: 20px 20px 30px;
 }
@@ -1541,10 +1558,14 @@ address {
     margin: 3vw 0 3.5vw 0;
     display: grid;
     grid-template: ". story-line ." .1fr
-                   "album-stare1 story-line story1" 1fr
-                   ". story-line ." .2fr
-                   "story2 story-line album-stare2" 1fr
-                   ". story-line ." .1fr /
+                   "album-stare1 story-line story1" 1.5fr
+                   "album-stare1 rok-zal story1" .3fr
+                   "album-stare1 story-line3 story1" 1.5fr
+                   ". story-line3 ." .5fr
+                   "story2 story-line3 album-stare2" 1.5fr
+                   "story2 rok-obecny album-stare2" .3fr
+                   "story2 story-line2 album-stare2" 1.5fr
+                   ". story-line2 ." .1fr /
                    1fr .4fr 1fr;
     column-gap: 2%;
 }
@@ -1555,8 +1576,14 @@ address {
 
 .album-stare1 {
     grid-area: album-stare1;
-    align-self: center;
-    justify-self: end;
+    background-image: url(/images/stare/pack1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.album-stare1 img {
+    display: none;
 }
 
 .story1 {
@@ -1574,26 +1601,36 @@ address {
     align-items: center;
 }
 
+.story-line2 {
+    border-left: 0.1rem solid #000000;
+    grid-area: story-line2;
+    justify-self: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.story-line3 {
+    border-left: 0.1rem solid #000000;
+    grid-area: story-line3;
+    justify-self: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
 p.rok-zal {
-    position: absolute;
-    right: 50%;
-    bottom: 25%;
-    padding: 0.5rem 0rem 0.5rem 0rem;
-    background: #FDFAF5;
+    grid-area: rok-zal;
     font-weight: 600;
     font-size: 3rem;
-    transform: translate(50%, 50%)
+    text-align: center;
 }
 
 p.rok-obecny {
-    position: absolute;
-    right: 50%;
-    bottom: -25%;
-    padding: 0.5rem 0rem 0.5rem 0rem;
-    background: #FDFAF5;
+    grid-area: rok-obecny;
     font-weight: 600;
     font-size: 3rem;
-    transform: translate(50%, 0)
+    text-align: center;
 }
 
 .story2 {
@@ -1604,8 +1641,14 @@ p.rok-obecny {
 
 .album-stare2 {
     grid-area: album-stare2;
-    align-self: center;
-    justify-self: start;
+    background-image: url(/images/stare/pack1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.album-stare2 img {
+    display: none;
 }
 
 /* @MEDIA QUERIES@ */
@@ -1632,9 +1675,24 @@ p.rok-obecny {
         display: none;
     }
 
+    .story-line2 {
+        display: none;
+    }
+
+    .story-line3 {
+        display: none;
+    }
+
     .album-stare2 {
         order: 1;
         margin-top: 3rem;
+    }
+
+    .album-stare1 img {
+        display: block;
+    }
+    .album-stare2 img {
+        display: block;
     }
 
     .story1 {
@@ -1888,18 +1946,27 @@ p.rok-obecny {
 
 form {
     display: grid;
-    grid-template: "input-2 button-ok"1fr
-                   "input-1 button-ok"1fr/
-                   1fr 1fr;
-    column-gap: 2%;
+    grid-template: "input-2 button-ok . ." .5fr
+                   "input-2 button-ok zamow-line pay-methods-logos" 1fr
+                   "input-2 button-ok zamow-line pay-methods-logos" 1fr
+                   "input-1 button-ok zamow-line pay-methods-logos" 1fr
+                   "input-1 button-ok zamow-line pay-methods-logos" 1fr
+                   "input-1 button-ok . ." .5fr/
+                   .8fr .8fr .04fr .5fr;
+    column-gap: 5%;
 }
 
 .input-1 {
     grid-area: input-1;
+    align-self: center;
+    justify-self: start;
+
 }
 
 .input-2 {
     grid-area: input-2;
+    align-self: center;
+    justify-self: start;
 }
 
 .button-ok {
@@ -1913,7 +1980,7 @@ input.input-kwota {
     padding: 1.2rem 1.6rem;
     text-align: center;
     margin-top: .5rem;
-    margin-bottom: 2rem;
+    color: black;
     background-color:#F2EFE9;
     border: 0.1rem solid transparent;
 }
@@ -1923,6 +1990,7 @@ input.input-nazwa {
     padding: 1.2rem 2rem 1.2rem 2rem;
     margin-top: .5rem;
     background-color:#F2EFE9;
+    color: #000000;
     border: 0.1rem solid transparent;
 }
 
@@ -1948,6 +2016,15 @@ input.sub-ok:hover {
     transition: all ease 0.2s;
 }
 
+.zamow-line {
+    grid-area: zamow-line;
+    border-left: 0.1rem solid #000000;
+    height: 100%;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+}
+
 .zaplac-zamowienie h1.sub-heading {
     text-align: center;
     color: #000000;
@@ -1956,6 +2033,34 @@ input.sub-ok:hover {
 
 .zaplac-zamowienie img.chevron-nav {
     height: .75rem;
+}
+
+.dotpay-logo img {
+    height: 2.5rem;
+}
+
+.visa-master-logo img {
+    height: 3rem;
+}
+
+.visa-master-logo2 img {
+    height: 3rem;
+}
+
+.blik-logo img {
+    height: 2.5rem;
+}
+
+.group-methods {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.pay-methods-logos {
+    grid-area: pay-methods-logos;
+    display: flex;
+    align-items: flex-start;
 }
 
 /* Dostawa cennik */
@@ -2060,10 +2165,6 @@ input.sub-ok:hover {
         margin-right: 0;
     }
 
-}
-
-@media(max-width: 865px) {
-
     form {
         display: flex;
         flex-wrap: wrap;
@@ -2096,6 +2197,41 @@ input.sub-ok:hover {
     input.sub-ok {
         margin-bottom: 2rem;
     }
+
+    .pay-methods-logos {
+        display: flex;
+        justify-content: center;
+        order: 1;
+        margin-bottom: 1rem;
+    }
+
+    .group-methods {
+        flex-flow: row;
+    }
+
+    .dotpay-logo img {
+        height: 1.5rem;
+        margin-right: .5rem;
+    }
+    
+    .visa-master-logo img {
+        height: 1.5rem;
+        margin-right: .5rem;
+    }
+    
+    .visa-master-logo2 img {
+        height: 1.5rem;
+        margin-right: .5rem;
+    }
+    
+    .blik-logo img {
+        height: 1.5rem;
+        margin-right: .5rem;
+    }
+
+}
+
+@media(max-width: 865px) {
 
     .dostawa {
         display: flex;
