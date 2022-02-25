@@ -1813,7 +1813,7 @@ p.rok-obecny {
 
 .image-kwiaciarnia {
     grid-area: image-kwiaciarnia;
-    background-image: url("/images/social-media/WOJ09666.jpg");
+    background-image: url("/images/stare/DSC01019.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1896,7 +1896,6 @@ p.rok-obecny {
 
     .image-kwiaciarnia {
         order: 1;
-        background-image: url("/images/social-media/WOJ09666.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -1916,7 +1915,6 @@ p.rok-obecny {
 
     .image-kwiaciarnia {
         order: 0;
-        background-image: url("/images/social-media/WOJ09666.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
