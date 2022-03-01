@@ -502,7 +502,6 @@ h4 a {
 
 .grid-img:hover {
     transform: scale(1.05);
-    opacity: 85%;
 }
 
 .grid:nth-child(1) {
@@ -1942,6 +1941,10 @@ p.rok-obecny {
     margin-right: 15rem;
 }
 
+u {
+    text-decoration: underline;
+}
+
 form {
     display: grid;
     grid-template: "input-2 button-ok . ." .5fr
@@ -2033,16 +2036,19 @@ input.sub-ok:hover {
     height: .75rem;
 }
 
+.bezpieczne-platnosci {
+    font-size: .688rem;
+    margin-bottom: .5rem;
+}
+
 .dotpay-logo img {
     height: 2.5rem;
+    margin-bottom: .5rem;
 }
 
 .visa-master-logo img {
     height: 3rem;
-}
-
-.visa-master-logo2 img {
-    height: 3rem;
+    margin-bottom: .5rem;
 }
 
 .blik-logo img {
@@ -2068,9 +2074,10 @@ input.sub-ok:hover {
     display: grid;
     grid-template: "image-kwiaciarnia . . . . " 0.7fr
                    "image-kwiaciarnia . heading-dostawa heading-dostawa heading-dostawa" 0.3fr
-                   "image-kwiaciarnia . bxs-phone jawor jawor" 0.3fr
-                   "image-kwiaciarnia . bxs-envelope-open poza-jawor poza-jawor" 0.3fr
-                   "image-kwiaciarnia . bxs-home na-pogrzeb na-pogrzeb" 0.3fr
+                   "image-kwiaciarnia . miasto jawor jawor" 0.3fr
+                   "image-kwiaciarnia . poza poza-jawor poza-jawor" 0.3fr
+                   "image-kwiaciarnia . poza-plus poza-plus-jawor poza-plus-jawor" 0.3fr
+                   "image-kwiaciarnia . pogrzeb na-pogrzeb na-pogrzeb" 0.3fr
                    "image-kwiaciarnia . . . ." 0.7fr /
                    0.9fr 0.1fr 0.08fr 0.6fr;
     row-gap: 0.5rem;
@@ -2081,8 +2088,9 @@ input.sub-ok:hover {
     margin-bottom: .8rem;
 }
 
-.bx.bxs-phone {
-    grid-area: bxs-phone;
+.miasto {
+    grid-area: miasto;
+    height: 1.8rem;
 }
 
 .jawor {
@@ -2090,8 +2098,9 @@ input.sub-ok:hover {
     margin-bottom: .5rem;
 }
 
-.bx.bxs-envelope-open {
-    grid-area: bxs-envelope-open;
+.poza {
+    grid-area: poza;
+    height: 1.8rem;
 }
 
 .poza-jawor {
@@ -2099,25 +2108,36 @@ input.sub-ok:hover {
     margin-bottom: .5rem;
 }
 
-.bx.bxs-home {
-    grid-area: bxs-home;
+.poza-plus {
+    grid-area: poza-plus;
+    height: 1.8rem;
+}
+
+.poza-plus-jawor {
+    grid-area: poza-plus-jawor;
 }
 
 .na-pogrzeb {
     grid-area: na-pogrzeb;
 }
 
-.dostawa .bx {
-    font-size: 1.4rem;
+.icon.pogrzeb {
+    grid-area: pogrzeb;
+    height: 1.8rem;
+}
+
+.dostawa .icon {
     margin-top: .5rem;
 }
 
 .mapa-dostaw {
     grid-area: image-kwiaciarnia;
-    background-image: url("/images/social-media/WOJ09668.jpg");
+    background-image: url("/images/dolnoslaskie-jawor.500.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-size: .8rem;
+    color: rgba(0,0,0,0.4);
 }
 
 .dostawa h2 {
@@ -2200,31 +2220,36 @@ input.sub-ok:hover {
         display: flex;
         justify-content: center;
         order: 1;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
+        border: solid .1rem #F2EFE9;
+        padding: .5rem .5rem 0.15rem .5rem;
     }
 
     .group-methods {
         flex-flow: row;
     }
 
+    .bezpieczne-platnosci {
+        margin-left: 1vw;
+        margin-right: 1vw;
+        margin-bottom: .5rem;
+    }
+
     .dotpay-logo img {
-        height: 1.5rem;
-        margin-right: .5rem;
+        height: 1.3rem;
+        margin-right: .7rem;
+        margin-bottom: 0;
     }
     
     .visa-master-logo img {
-        height: 1.5rem;
-        margin-right: .5rem;
-    }
-    
-    .visa-master-logo2 img {
-        height: 1.5rem;
-        margin-right: .5rem;
+        height: 1.6rem;
+        margin-right: .8rem;
+        margin-bottom: 0;
     }
     
     .blik-logo img {
-        height: 1.5rem;
-        margin-right: .5rem;
+        height: 1.4rem;
+        margin-right: .7rem;
     }
 
 }
@@ -2240,27 +2265,16 @@ input.sub-ok:hover {
         row-gap: 0rem;
     }
     
-    .heading-dostawa, .jawor, .poza-jawor, .na-pogrzeb, .dostawa .bx {
+    .heading-dostawa, .jawor, .poza-jawor, .poza-plus-jawor, .na-pogrzeb, .dostawa .icon {
         text-align: center;
     }
 
-    .jawor, .poza-jawor, .na-pogrzeb, .dostawa .bx {
+    .jawor, .poza-jawor, .poza-plus-jawor, .na-pogrzeb, .dostawa .icon {
         order: 1;
     }
 
-    .dostawa .bx {
-        font-size: 2rem;
-    }
-
     .mapa-dostaw {
-        background-image: url("/images/social-media/WOJ09666.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 60vw;
-        height: 40vh;
-        align-self: center;
-        margin-bottom: 1rem;
+        height: 60vh;
     }
 
 }
@@ -2277,13 +2291,8 @@ input.sub-ok:hover {
 
     .mapa-dostaw {
         order: 0;
-        background-image: url("/images/social-media/WOJ09666.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 80vw;
-        height: 30vh;
-        align-self: center;
+        width: 90vw;
+        height: 40vh;
     }
 
     .info-dostawa {
