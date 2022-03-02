@@ -2132,12 +2132,13 @@ input.sub-ok:hover {
 
 .mapa-dostaw {
     grid-area: image-kwiaciarnia;
-    background-image: url("/images/dolnoslaskie-jawor.500.png");
+    background-image: url("/images/mapa-dostaw.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     font-size: .8rem;
     color: rgba(0,0,0,0.4);
+    border: solid .1rem black;
 }
 
 .dostawa h2 {
@@ -2274,7 +2275,11 @@ input.sub-ok:hover {
     }
 
     .mapa-dostaw {
-        height: 60vh;
+        height: 75vh;
+    }
+
+    .dostawa .icon.miasto {
+        margin-top: 2rem;
     }
 
 }
@@ -2292,7 +2297,7 @@ input.sub-ok:hover {
     .mapa-dostaw {
         order: 0;
         width: 90vw;
-        height: 40vh;
+        height: 50vh;
     }
 
     .info-dostawa {
