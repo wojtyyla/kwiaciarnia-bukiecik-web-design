@@ -2241,6 +2241,7 @@ input.sub-ok:hover {
 
     input.sub-ok {
         margin-bottom: 2rem;
+        font-weight: 400;
     }
 
     .pay-methods-logos {
