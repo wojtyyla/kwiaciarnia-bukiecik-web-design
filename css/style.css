@@ -1439,6 +1439,7 @@ address {
 
     .gallery .gallery-image {
         width: calc(100% / 3);
+        height: auto;
     }
 }
 
@@ -1495,6 +1496,7 @@ address {
 
     .gallery .gallery-image {
         width: calc(100% / 2);
+        height: auto;
     }
 }
 
@@ -1524,6 +1526,7 @@ address {
 
     .gallery .gallery-image {
         width: calc(100% / 1);
+        height: auto;
     }
 }
 
