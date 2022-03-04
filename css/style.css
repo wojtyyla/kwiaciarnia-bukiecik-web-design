@@ -1999,6 +1999,9 @@ input.input-kwota {
     color: black;
     background-color:#F2EFE9;
     border: 0.1rem solid transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;   
 }
 
 input.input-nazwa {
@@ -2009,6 +2012,9 @@ input.input-nazwa {
     color: #000000;
     border: 0.1rem solid transparent;
     width: 28vw;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 input.input-nazwa:focus {
@@ -2026,6 +2032,9 @@ input.sub-ok {
     padding: 0.9rem 3rem;
     border-radius: 3px;
     cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 input.sub-ok:hover {
@@ -2233,13 +2242,8 @@ input.sub-ok:hover {
         order: 1;
     }
 
-    .button-ok {
-        font-size: 1.188rem;
-        color: white;
-        background-color: black;
-        padding: 0.9rem 3rem;
+    input.sub-ok {
         margin-bottom: 2rem;
-        border-radius: 1px;
     }
 
     .pay-methods-logos {
