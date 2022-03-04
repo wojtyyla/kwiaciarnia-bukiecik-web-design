@@ -2234,6 +2234,10 @@ input.sub-ok:hover {
     }
 
     input.sub-ok {
+        font-size: 1.188rem;
+        color: white;
+        background-color: black;
+        padding: 0.9rem 3rem;
         margin-bottom: 2rem;
         border-radius: 1px;
     }
