@@ -2233,7 +2233,7 @@ input.sub-ok:hover {
         order: 1;
     }
 
-    input.sub-ok {
+    .button-ok {
         font-size: 1.188rem;
         color: white;
         background-color: black;
