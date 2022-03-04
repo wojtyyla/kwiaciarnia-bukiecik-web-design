@@ -35,7 +35,7 @@ const gallery = document.querySelectorAll(".gallery .gallery-image"),
 previewBox = document.querySelector(".preview-box"),
 previewImg = previewBox.querySelector("img"),
 closeIcon = previewBox.querySelector(".details"),
-closeBody = previewBox.querySelector(".preview-box"),
+closeBody = document.querySelector(".shadow"),
 currentImg = previewBox.querySelector(".current-img"),
 totalImg = previewBox.querySelector(".total-img"),
 shadow = document.querySelector(".shadow");
@@ -56,6 +56,7 @@ window.onload = ()=>{
 
       const prevBtn = document.querySelector(".prev");
       const nextBtn = document.querySelector(".next");
+      
       if(newIndex == 0){
         prevBtn.style.display = "none";
       }
@@ -72,6 +73,20 @@ window.onload = ()=>{
           nextBtn.style.display = "block";
         }
       }
+      document.addEventListener("keydown", e=> {
+        console.log(e)
+        if(e.keyCode === 37) {
+          newIndex--;
+        if(newIndex == 0){
+          preview();
+          prevBtn.style.display = "none";
+        }else{
+          preview();
+          nextBtn.style.display = "block";
+        }
+        }
+      })
+
       nextBtn.onclick = ()=>{
         newIndex++;
         if(newIndex >= gallery.length - 1){
@@ -82,6 +97,19 @@ window.onload = ()=>{
           prevBtn.style.display = "block";
         }
       }
+      document.addEventListener("keydown", e=> {
+        console.log(e)
+        if(e.keyCode === 39) {
+          newIndex++;
+        if(newIndex >= gallery.length - 1){
+          preview();
+          nextBtn.style.display = "none";
+        }else{
+          preview();
+          prevBtn.style.display = "block";
+        }
+        }
+      })
 
 
       preview();

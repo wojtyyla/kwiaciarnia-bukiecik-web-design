@@ -1993,6 +1993,7 @@ input.input-nazwa {
     background-color:#F2EFE9;
     color: #000000;
     border: 0.1rem solid transparent;
+    width: 28vw;
 }
 
 input.input-nazwa:focus {
@@ -2209,6 +2210,10 @@ input.sub-ok:hover {
         margin-bottom: 1.5rem;
     }
 
+    input.input-nazwa {
+        width: 50vw;
+    }
+
     .button-ok {
         order: 1;
     }
@@ -2257,6 +2262,10 @@ input.sub-ok:hover {
 
 @media(max-width: 865px) {
 
+    input.input-nazwa {
+        width: 60vw;
+    }
+
     .dostawa {
         display: flex;
         flex-flow: column;
@@ -2288,6 +2297,14 @@ input.sub-ok:hover {
 
     .zaplac-zamowienie {
         padding: 0 5vw;
+    }
+
+    input.input-nazwa {
+        width: 90vw;
+    }
+
+    input.input-kwota {
+        width: 60vw;
     }
 
     .dostawa {
