@@ -106,7 +106,7 @@
 
                 <div class="input-1">
                     <div class="pay-money">Kwota [PLN]:</div>
-                    <input type="text" name="amount" id="dp_kwota" class="input-kwota" pattern="^([1-9])((\.\d{1,2})?)$|^((?!0)(\d){1,5})((\.\d{1,2})?)$|^(1(\d{5})(.\d{1,2})?)$|^(200000(.[0]{1,2})?)$" placeholder="np. 50" maxlength="9" size="9" title="Kwota powinna zawierać się w przedziale 1 - 200000 PLN. Dozwolony format to np: 100 lub 152.43" oninput="this.value = this.value.replace(/[^0-9\.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');" />
+                    <input type="text" name="amount" id="dp_kwota" class="input-kwota" placeholder="np. 50" maxlength="9" size="9" title="Kwota powinna zawierać się w przedziale 1 - 200000 PLN. Dozwolony format to np: 100 lub 152.43"/>
                 </div>
 
                 <div class="input-2">
@@ -118,8 +118,8 @@
                 <input type="hidden" name="id" value="174405"/>
                 <input type="hidden" name="channel" value="248">
                 <input type="hidden" name="ignore_last_payment_channel" value="1">
-                <input type="hidden" name="url" value="http://127.0.0.1:5500/index.html"/>
-                <input type="hidden" name="buttontext" id="buttontext" value="Powrót"/>                
+                <input type="hidden" name="url" value="www.bukiecik.eu"/>
+                <input type="hidden" name="buttontext" id="buttontext" value="Powrót do bukiecik.eu"/>                
 
                 <div class="button-ok">
                     <input type="submit" name="zaplac" class="sub-ok" value="zapłać online">
