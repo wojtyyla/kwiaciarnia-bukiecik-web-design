@@ -2005,6 +2005,7 @@ input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    font-weight: 400;
 }
 
 input.input-nazwa {
@@ -2241,7 +2242,6 @@ input.sub-ok:hover {
 
     input.sub-ok {
         margin-bottom: 2rem;
-        font-weight: 400;
     }
 
     .pay-methods-logos {
