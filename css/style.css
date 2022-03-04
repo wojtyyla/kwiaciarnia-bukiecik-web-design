@@ -2235,7 +2235,7 @@ input.sub-ok:hover {
 
     input.sub-ok {
         margin-bottom: 2rem;
-        color: aqua;
+        border-radius: 1px;
     }
 
     .pay-methods-logos {
