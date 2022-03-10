@@ -1600,7 +1600,7 @@ address {
 
 .album-stare1 {
     grid-area: album-stare1;
-    background-image: url(/images/stare/both1.png);
+    background-image: url(/images/o-nas/both1.png);
 }
 
 .album-stare1 img {
@@ -1660,7 +1660,7 @@ p.rok-obecny {
 
 .album-stare2 {
     grid-area: album-stare2;
-    background-image: url(/images/stare/both2.png);
+    background-image: url(/images/o-nas/both2.png);
 }
 
 .story2 {
@@ -1675,7 +1675,7 @@ p.rok-obecny {
 
 .album-stare3 {
     grid-area: album-stare3;
-    background-image: url(/images/stare/both3.png);
+    background-image: url(/images/o-nas/both3.png);
 }
 
 .story3 {
@@ -1850,7 +1850,7 @@ p.rok-obecny {
 
 .image-kwiaciarnia {
     grid-area: image-kwiaciarnia;
-    background-image: url("/images/stare/DSC01019.jpg");
+    background-image: url("/images/DSC01019.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
