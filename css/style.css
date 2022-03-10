@@ -1347,6 +1347,11 @@ address {
     margin: 0 0.313rem;
 }
 
+.details .nazwa-buk {
+    display: flex;
+    flex-flow: row;
+}
+
 .preview-box .img-box {
     display: flex;
     width: 100%;
@@ -1470,7 +1475,7 @@ address {
         background: linear-gradient(90deg,transparent,#D7DEE0);
         background-size: cover;
         background-position-x: -1.8vw;
-        width: 15%;
+        width: 12%;
         height: 100%;
     }
 
@@ -1693,7 +1698,7 @@ p.rok-obecny {
 @media(max-width: 1025px) {
 
     .text-group {
-        margin-bottom: 3rem;
+        margin-bottom: 4.5rem;
     }
 
     .historia-group {
