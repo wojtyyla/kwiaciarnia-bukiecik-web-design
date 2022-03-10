@@ -1720,16 +1720,36 @@ p.rok-obecny {
         display: none;
     }
 
+    .story-line4 {
+        display: none;
+    }
+
+    .album-stare1, .album-stare2, .album-stare3 {
+        background-image: none;
+    }
+
     .album-stare2 {
         order: 1;
         margin-top: 3rem;
+        
+    }
+
+    .album-stare3 {
+        order: 3;
     }
 
     .album-stare1 img {
         display: block;
     }
+
     .album-stare2 img {
         display: block;
+        margin-top: 2rem;
+    }
+
+    .album-stare3 img {
+        display: block;
+        margin-top: 4rem;
     }
 
     .story1 {
@@ -1740,10 +1760,15 @@ p.rok-obecny {
     .story2 {
         order: 2;
         text-align: center;
-        margin-bottom: 10vw;;
     }
 
-    p.rok-zal {
+    .story3 {
+        order: 3;
+        text-align: center;
+        margin-bottom: 10vw;
+    }
+
+    p.rok-zal, p.rok-2000, p.rok-obecny {
         position: static;
         right: 0%;
         bottom: 0%;
@@ -1753,22 +1778,17 @@ p.rok-obecny {
         font-size: 3rem;
         transform: translate(0%, 0%);
         color:#F7313B;
+    }
+
+    p.rok-2000 {
+        order: 2;
     }
 
     p.rok-obecny {
-        order: 2;
-        position: static;
-        right: 0%;
-        bottom: 0%;
-        padding: 0rem 0rem 0rem 0rem;
-        background: none;
-        font-weight: 600;
-        font-size: 3rem;
-        transform: translate(0%, 0%);
-        color:#F7313B;
+        order: 3;
     }
 
-    .album-stare1 img, .album-stare2 img {
+    .album-stare1 img, .album-stare2 img, .album-stare3 img {
         width: 100%;
     }
 }
