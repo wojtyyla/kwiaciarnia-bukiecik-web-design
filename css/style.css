@@ -1572,28 +1572,35 @@ address {
     margin: 3vw 0 3.5vw 0;
     display: grid;
     grid-template: ". story-line ." .1fr
-                   "album-stare1 story-line story1" 1.5fr
+                   "album-stare1 story-line story1" 1.8fr
                    "album-stare1 rok-zal story1" .3fr
-                   "album-stare1 story-line3 story1" 1.5fr
+                   "album-stare1 story-line3 story1" 1.8fr
                    ". story-line3 ." .5fr
-                   "story2 story-line3 album-stare2" 1.5fr
-                   "story2 rok-obecny album-stare2" .3fr
-                   "story2 story-line2 album-stare2" 1.5fr
-                   ". story-line2 ." .1fr /
+                   "story2 story-line3 album-stare2" 1.8fr
+                   "story2 rok-2000 album-stare2" .3fr
+                   "story2 story-line2 album-stare2" 1.8fr
+                   ". story-line2 ." .1fr
+                   "album-stare3 story-line2 story3" 1.8fr
+                   "album-stare3 rok-obecny story3" .3fr
+                   "album-stare3 story-line4 story3" 1.8fr
+                   ". story-line4 ." .1fr /
                    1fr .4fr 1fr;
     column-gap: 2%;
 }
 
-.album-stare1 img, .album-stare2 img {
+.album-stare1 img, .album-stare2 img, .album-stare3 img {
     width: 20rem;
+}
+
+.album-stare1, .album-stare2, .album-stare3 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .album-stare1 {
     grid-area: album-stare1;
-    background-image: url(/images/stare/pack1.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(/images/stare/both1.png);
 }
 
 .album-stare1 img {
@@ -1606,35 +1613,39 @@ address {
     justify-self: center;
 }
 
-.story-line {
+.story-line, .story-line2, .story-line3, .story-line4 {
     border-left: 0.1rem solid #000000;
-    grid-area: story-line;
     justify-self: center;
     margin: 0;
     display: flex;
     align-items: center;
+}
+
+.story-line {
+    grid-area: story-line;
 }
 
 .story-line2 {
-    border-left: 0.1rem solid #000000;
     grid-area: story-line2;
-    justify-self: center;
-    margin: 0;
-    display: flex;
-    align-items: center;
 }
 
 .story-line3 {
-    border-left: 0.1rem solid #000000;
     grid-area: story-line3;
-    justify-self: center;
-    margin: 0;
-    display: flex;
-    align-items: center;
+}
+
+.story-line4 {
+    grid-area: story-line4;
 }
 
 p.rok-zal {
     grid-area: rok-zal;
+    font-weight: 600;
+    font-size: 3rem;
+    text-align: center;
+}
+
+p.rok-2000 {
+    grid-area: rok-2000;
     font-weight: 600;
     font-size: 3rem;
     text-align: center;
@@ -1647,21 +1658,33 @@ p.rok-obecny {
     text-align: center;
 }
 
+.album-stare2 {
+    grid-area: album-stare2;
+    background-image: url(/images/stare/both2.png);
+}
+
 .story2 {
     grid-area: story2;
     align-self: center;
     justify-self: center;
 }
 
-.album-stare2 {
-    grid-area: album-stare2;
-    background-image: url(/images/stare/pack1.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.album-stare2 img {
+    display: none;
 }
 
-.album-stare2 img {
+.album-stare3 {
+    grid-area: album-stare3;
+    background-image: url(/images/stare/both3.png);
+}
+
+.story3 {
+    grid-area: story3;
+    align-self: center;
+    justify-self: center;
+}
+
+.album-stare3 img {
     display: none;
 }
 
