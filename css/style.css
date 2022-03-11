@@ -1271,7 +1271,7 @@ address {
 
 .gallery-image h1 {
     text-align: center;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1rem;
     margin-top: .4rem;
 }
@@ -1285,6 +1285,10 @@ address {
     display: flex;
     width: 100%;
     overflow: hidden;
+}
+
+.nazwa-zdjecia {
+    font-weight: 600;
 }
 
 .gallery .gallery-image {

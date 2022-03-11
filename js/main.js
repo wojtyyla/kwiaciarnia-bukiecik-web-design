@@ -34,7 +34,8 @@ document.getElementById("js-year").innerHTML = new Date().getFullYear();
 const gallery = document.querySelectorAll(".gallery .gallery-image"),
 previewBox = document.querySelector(".preview-box"),
 previewImg = previewBox.querySelector("img"),
-previewName = previewBox.querySelector(".nazwa-buk"),
+previewName = previewBox.querySelector(".nazwa-zdjecia"),
+previewOpis = previewBox.querySelector(".opis-zdjecia"),
 closeIcon = previewBox.querySelector(".details"),
 closeBody = document.querySelector(".shadow"),
 currentImg = previewBox.querySelector(".current-img"),
@@ -51,7 +52,8 @@ window.onload = ()=>{
       console.log(i);
       function preview(){
         currentImg.textContent = newIndex + 1;
-        previewName.textContent = document.querySelectorAll('.nazwa-bukietu h1')[i].innerHTML;
+        previewName.textContent = gallery[newIndex].querySelectorAll('.nazwa-foto h1')[0].innerHTML;
+        previewOpis.textContent = gallery[newIndex].querySelectorAll('.nazwa-foto p')[0].innerHTML;
         let selectedImgUrl = gallery[newIndex].querySelector("img").src;
         previewImg.src = selectedImgUrl;
       }
