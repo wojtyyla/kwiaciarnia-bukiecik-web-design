@@ -50,13 +50,15 @@ window.onload = ()=>{
     gallery[i].onclick = ()=>{
       clickImgIndex = newIndex;
       console.log(i);
-      function preview(){
-        currentImg.textContent = newIndex + 1;
-        previewName.textContent = gallery[newIndex].querySelectorAll('.nazwa-foto h1')[0].innerHTML;
-        previewOpis.textContent = gallery[newIndex].querySelectorAll('.nazwa-foto p')[0].innerHTML;
-        let selectedImgUrl = gallery[newIndex].querySelector("img").src;
-        previewImg.src = selectedImgUrl;
-      }
+      if(window.innerWidth > 555){
+          function preview(){
+            currentImg.textContent = newIndex + 1;
+            previewName.textContent = gallery[newIndex].querySelectorAll('.nazwa-foto h1')[0].innerHTML;
+            previewOpis.textContent = gallery[newIndex].querySelectorAll('.nazwa-foto p')[0].innerHTML;
+            let selectedImgUrl = gallery[newIndex].querySelector("img").src;
+            previewImg.src = selectedImgUrl;
+          }
+    };
 
       const prevBtn = document.querySelector(".prev");
       const nextBtn = document.querySelector(".next");
@@ -77,19 +79,6 @@ window.onload = ()=>{
           nextBtn.style.display = "block";
         }
       }
-      document.addEventListener("keydown", e=> {
-        console.log(e)
-        if(e.keyCode === 37) {
-          newIndex--;
-        if(newIndex == 0){
-          preview();
-          prevBtn.style.display = "none";
-        }else{
-          preview();
-          nextBtn.style.display = "block";
-        }
-        }
-      })
 
       nextBtn.onclick = ()=>{
         newIndex++;
@@ -101,20 +90,6 @@ window.onload = ()=>{
           prevBtn.style.display = "block";
         }
       }
-      document.addEventListener("keydown", e=> {
-        console.log(e)
-        if(e.keyCode === 39) {
-          newIndex++;
-        if(newIndex >= gallery.length - 1){
-          preview();
-          nextBtn.style.display = "none";
-        }else{
-          preview();
-          prevBtn.style.display = "block";
-        }
-        }
-      })
-
 
       preview();
       previewBox.classList.add("show");
