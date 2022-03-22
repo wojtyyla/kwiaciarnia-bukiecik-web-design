@@ -1266,8 +1266,8 @@ address {
     background-image: url('/images/illustrations/bukiecik_ilustracje-03.svg');
     background-repeat: no-repeat;
     background-position: right;
-    background-position-x: 2rem;
-    background-position-y: -8.5rem;
+    background-position-x: 1rem;
+    background-position-y: -8rem;
     background-size: cover;
     width: 28%;
     height: 100%;
@@ -1292,9 +1292,9 @@ address {
     background-repeat: no-repeat;
     background-position: right;
     background-position-x: 1rem;
-    background-position-y: -7rem;
+    background-position-y: -8rem;
     background-size: cover;
-    width: 29%;
+    width: 32%;
     height: 100%;
 }
 
@@ -1573,7 +1573,13 @@ address {
     .kategoria-slubne:after {
         background-position-x: 1rem;
         background-position-y: -11rem;
-        width: 24.1%;
+        width: 25.1%;
+    }
+
+    .kategoria-flowerboxy:after {
+        background-position-x: 3rem;
+        background-position-y: -12rem;
+        width: 30%;
     }
 }
 
@@ -1583,6 +1589,12 @@ address {
         background-position-x: 2rem;
         background-position-y: -5.5rem;
         width: 30%;
+    }
+
+    .kategoria-flowerboxy:after {
+        background-position-x: 1rem;
+        background-position-y: -7rem;
+        width: 35%;
     }
 }
 
@@ -1610,6 +1622,12 @@ address {
         background-position-x: 3rem;
         background-position-y: -4.5rem;
         width: 32%;
+    }
+
+    .kategoria-flowerboxy:after {
+        background-position-x: 1rem;
+        background-position-y: -6rem;
+        width: 35%;
     }
 
     .gallery .gallery-image {
@@ -1669,6 +1687,12 @@ address {
         background-position-y: -4rem;
         width: 40%;
     }
+
+    .kategoria-flowerboxy:after {
+        background-position-x: 2rem;
+        background-position-y: -6rem;
+        width: 48%;
+    }
 }
 
 @media (max-width: 750px) {
@@ -1695,6 +1719,12 @@ address {
         background-position-x: 5.5rem;
         background-position-y: -5.5rem;
         width: 60%;
+    }
+
+    .kategoria-flowerboxy:after {
+        background-position-x: 5.5rem;
+        background-position-y: -5rem;
+        width: 65%;
     }
 
     .gallery .gallery-image {
@@ -1738,6 +1768,12 @@ address {
         width: 80%;
     }
 
+    .kategoria-flowerboxy:after {
+        background-position-x: 11rem;
+        background-position-y: -5rem;
+        width: 85%;
+    }
+
     .gallery .gallery-image {
         width: calc(100% / 1);
     }
@@ -1759,15 +1795,15 @@ address {
 @media (max-width: 440px) {
 
     .kategoria-bukiety:after {
-        background-position-x: 12.3rem;
+        background-position-x: 10rem;
         background-position-y: -.5rem;
-        width: 100%;
+        width: 86%;
     }
 
     .kategoria-rosliny:after {
-        background-position-x: 9.3rem;
-        background-position-y: -1.5rem;
-        width: 90%;
+        background-position-x: 8rem;
+        background-position-y: -3rem;
+        width: 85%;
     }
 
     .kategoria-pogrzebowe:after {
@@ -1780,6 +1816,12 @@ address {
         background-position-x: 8rem;
         background-position-y: -1rem;
         width: 95%;
+    }
+
+    .kategoria-flowerboxy:after {
+        background-position-x: 10rem;
+        background-position-y: -.8rem;
+        width: 97%;
     }
 
     h1.sub-heading {
