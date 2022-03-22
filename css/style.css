@@ -1317,9 +1317,9 @@ address {
     background-repeat: no-repeat;
     background-position: right;
     background-position-x: -1rem;
-    background-position-y: -3.5rem;
+    background-position-y: -3rem;
     background-size: cover;
-    width: 28%;
+    width: 26%;
     height: 100%;
 }
 
@@ -1367,9 +1367,9 @@ address {
     background-repeat: no-repeat;
     background-position: right;
     background-position-x: 1rem;
-    background-position-y: -7.5rem;
+    background-position-y: -9rem;
     background-size: cover;
-    width: 29%;
+    width: 32%;
     height: 100%;
 }
 
@@ -1581,6 +1581,18 @@ address {
         background-position-y: -12rem;
         width: 30%;
     }
+
+    .kategoria-koszekwiatow:after {
+        background-position-x: 0rem;
+        background-position-y: -3.5rem;
+        width: 22%;
+    }
+
+    .kategoria-lasywszkle:after {
+        background-position-x: 0rem;
+        background-position-y: -10rem;
+        width: 25%;
+    }
 }
 
 @media(max-width: 1270px) {
@@ -1594,6 +1606,18 @@ address {
     .kategoria-flowerboxy:after {
         background-position-x: 1rem;
         background-position-y: -7rem;
+        width: 35%;
+    }
+
+    .kategoria-koszekwiatow:after {
+        background-position-x: -1rem;
+        background-position-y: -3rem;
+        width: 30%;
+    }
+
+    .kategoria-lasywszkle:after {
+        background-position-x: -1rem;
+        background-position-y: -8rem;
         width: 35%;
     }
 }
@@ -1627,6 +1651,18 @@ address {
     .kategoria-flowerboxy:after {
         background-position-x: 1rem;
         background-position-y: -6rem;
+        width: 35%;
+    }
+
+    .kategoria-koszekwiatow:after {
+        background-position-x: 0rem;
+        background-position-y: -2rem;
+        width: 32%;
+    }
+
+    .kategoria-lasywszkle:after {
+        background-position-x: 0rem;
+        background-position-y: -6.5rem;
         width: 35%;
     }
 
@@ -1693,6 +1729,18 @@ address {
         background-position-y: -6rem;
         width: 48%;
     }
+
+    .kategoria-koszekwiatow:after {
+        background-position-x: 0rem;
+        background-position-y: -5rem;
+        width: 35%;
+    }
+
+    .kategoria-lasywszkle:after {
+        background-position-x: 2rem;
+        background-position-y: -9rem;
+        width: 55%;
+    }
 }
 
 @media (max-width: 750px) {
@@ -1725,6 +1773,18 @@ address {
         background-position-x: 5.5rem;
         background-position-y: -5rem;
         width: 65%;
+    }
+
+    .kategoria-koszekwiatow:after {
+        background-position-x: 4rem;
+        background-position-y: 0rem;
+        width: 55%;
+    }
+
+    .kategoria-lasywszkle:after {
+        background-position-x: 2rem;
+        background-position-y: -5.5rem;
+        width: 55%;
     }
 
     .gallery .gallery-image {
@@ -1772,6 +1832,18 @@ address {
         background-position-x: 11rem;
         background-position-y: -5rem;
         width: 85%;
+    }
+
+    .kategoria-koszekwiatow:after {
+        background-position-x: 9rem;
+        background-position-y: 0rem;
+        width: 75%;
+    }
+
+    .kategoria-lasywszkle:after {
+        background-position-x: 6rem;
+        background-position-y: -2rem;
+        width: 65%;
     }
 
     .gallery .gallery-image {
@@ -1822,6 +1894,18 @@ address {
         background-position-x: 10rem;
         background-position-y: -.8rem;
         width: 97%;
+    }
+
+    .kategoria-koszekwiatow:after {
+        background-position-x: 6.5rem;
+        background-position-y: 3rem;
+        width: 75%;
+    }
+
+    .kategoria-lasywszkle:after {
+        background-position-x: 5.5rem;
+        background-position-y: 0rem;
+        width: 75%;
     }
 
     h1.sub-heading {
