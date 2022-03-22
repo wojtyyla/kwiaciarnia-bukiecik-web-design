@@ -15,7 +15,7 @@
 }
 
 html {
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
 }
@@ -23,7 +23,7 @@ html {
 body {
     background: #FDFAF5;
     min-height: 200vh;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     color: #000000;
 }
 
