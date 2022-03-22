@@ -664,7 +664,7 @@ h4 a {
     height: 2.6rem;
 }
 
-@media all and (max-width: 845px) {
+@media all and (max-width: 886px) {
 
     .chevron-kroki {
         display: none;
@@ -1223,16 +1223,104 @@ address {
     height: 100%;
 }
 
-.kategoria-title {
-    font-family: freighttextcmp-pro, serif;
-    font-size: 4rem;
-    line-height: 4rem;
-    margin-bottom: 1rem;
+/* ! POGRZEBOWE ! */
+
+.kategoria-pogrzebowe {
+    position: relative;
+    background-color: #D7DEE0;
+    margin: 0px 2vw 1.2rem 2vw;
+    padding: 3.5vw 4vw 2.2vw 4vw;
 }
 
-.kategoria-opis {
-    font-size: 0.813rem;
-    margin-right: 40vw;
+.kategoria-pogrzebowe:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url('/images/illustrations/bukiecik_ilustracje-07.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 1rem;
+    background-position-y: -5.5rem;
+    background-size: cover;
+    width: 28%;
+    height: 100%;
+}
+
+/* ! ŚLUBNE ! */
+
+.kategoria-slubne {
+    position: relative;
+    background-color: #D7DEE0;
+    margin: 0px 2vw 1.2rem 2vw;
+    padding: 3.5vw 4vw 2.2vw 4vw;
+}
+
+.kategoria-slubne:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url('/images/illustrations/bukiecik_ilustracje-03.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 3rem;
+    background-position-y: -10rem;
+    background-size: cover;
+    width: 35%;
+    height: 100%;
+}
+
+/* ! FLOWER BOXY ! */
+
+.kategoria-flowerboxy {
+    position: relative;
+    background-color: #D7DEE0;
+    margin: 0px 2vw 1.2rem 2vw;
+    padding: 3.5vw 4vw 2.2vw 4vw;
+}
+
+.kategoria-flowerboxy:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url('/images/illustrations/bukiecik_ilustracje-05.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 1rem;
+    background-position-y: -7rem;
+    background-size: cover;
+    width: 29%;
+    height: 100%;
+}
+
+/* ! KOSZE KWIATÓW ! */
+
+.kategoria-koszekwiatow {
+    position: relative;
+    background-color: #D7DEE0;
+    margin: 0px 2vw 1.2rem 2vw;
+    padding: 3.5vw 4vw 2.2vw 4vw;
+}
+
+.kategoria-koszekwiatow:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url('/images/illustrations/bukiecik_ilustracje-10.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: -1rem;
+    background-position-y: -3.5rem;
+    background-size: cover;
+    width: 28%;
+    height: 100%;
 }
 
 /* ! ROŚLINY ! */
@@ -1253,11 +1341,48 @@ address {
     background-image: url('/images/illustrations/bukiecik_ilustracje-08.svg');
     background-repeat: no-repeat;
     background-position: right;
-    background-position-x: 1rem;
-    background-position-y: -6.5rem;
+    background-position-x: 0rem;
+    background-position-y: -5rem;
     background-size: cover;
-    width: 32%;
+    width: 28%;
     height: 100%;
+}
+
+/* ! LASY W SZKLE ! */
+
+.kategoria-lasywszkle {
+    position: relative;
+    background-color: #D7DEE0;
+    margin: 0px 2vw 1.2rem 2vw;
+    padding: 3.5vw 4vw 2.2vw 4vw;
+}
+
+.kategoria-lasywszkle:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url('/images/illustrations/bukiecik_ilustracje-09.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 1rem;
+    background-position-y: -7.5rem;
+    background-size: cover;
+    width: 29%;
+    height: 100%;
+}
+
+.kategoria-title {
+    font-family: freighttextcmp-pro, serif;
+    font-size: 4rem;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+}
+
+.kategoria-opis {
+    font-size: 0.813rem;
+    margin-right: 40vw;
 }
 
 .allabody {
