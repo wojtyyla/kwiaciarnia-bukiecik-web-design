@@ -1244,7 +1244,7 @@ address {
     background-position-x: 1rem;
     background-position-y: -5.5rem;
     background-size: cover;
-    width: 28%;
+    width: 30%;
     height: 100%;
 }
 
@@ -1266,10 +1266,10 @@ address {
     background-image: url('/images/illustrations/bukiecik_ilustracje-03.svg');
     background-repeat: no-repeat;
     background-position: right;
-    background-position-x: 3rem;
-    background-position-y: -10rem;
+    background-position-x: 2rem;
+    background-position-y: -8.5rem;
     background-size: cover;
-    width: 35%;
+    width: 28%;
     height: 100%;
 }
 
@@ -1563,6 +1563,27 @@ address {
         background-position-y: -7rem;
         width: 25%;
     }
+
+    .kategoria-pogrzebowe:after {
+        background-position-x: 3rem;
+        background-position-y: -9rem;
+        width: 25%;
+    }
+
+    .kategoria-slubne:after {
+        background-position-x: 1rem;
+        background-position-y: -11rem;
+        width: 24.1%;
+    }
+}
+
+@media(max-width: 1270px) {
+
+    .kategoria-slubne:after {
+        background-position-x: 2rem;
+        background-position-y: -5.5rem;
+        width: 30%;
+    }
 }
 
 @media(max-width: 1050px) {
@@ -1577,6 +1598,18 @@ address {
         background-position-x: 1rem;
         background-position-y: -6rem;
         width: 39%;
+    }
+
+    .kategoria-pogrzebowe:after {
+        background-position-x: 1rem;
+        background-position-y: -6rem;
+        width: 35%;
+    }
+
+    .kategoria-slubne:after {
+        background-position-x: 3rem;
+        background-position-y: -4.5rem;
+        width: 32%;
     }
 
     .gallery .gallery-image {
@@ -1624,6 +1657,18 @@ address {
     .realizacje-page-menu li a {
         font-size: 1rem;
     }
+
+    .kategoria-pogrzebowe:after {
+        background-position-x: 2rem;
+        background-position-y: -5rem;
+        width: 45%;
+    }
+
+    .kategoria-slubne:after {
+        background-position-x: 2rem;
+        background-position-y: -4rem;
+        width: 40%;
+    }
 }
 
 @media (max-width: 750px) {
@@ -1640,6 +1685,18 @@ address {
         width: 50%;
     }
 
+    .kategoria-pogrzebowe:after {
+        background-position-x: 5.5rem;
+        background-position-y: -5rem;
+        width: 65%;
+    }
+
+    .kategoria-slubne:after {
+        background-position-x: 5.5rem;
+        background-position-y: -5.5rem;
+        width: 60%;
+    }
+
     .gallery .gallery-image {
         width: calc(100% / 2);
     }
@@ -1652,7 +1709,7 @@ address {
 
 @media (max-width: 555px) {
 
-    .kategoria-bukiety {
+    .kategoria-bukiety, .kategoria-pogrzebowe, .kategoria-slubne, .kategoria-flowerboxy, .kategoria-koszekwiatow, .kategoria-rosliny.kategoria-lasywszkle {
         margin: 0px 2vw 1.5rem 2vw;
         padding: 5vw 4vw 5vw 4vw;
     }
@@ -1663,15 +1720,22 @@ address {
         width: 70%;
     }
 
-    .kategoria-rosliny {
-        margin: 0px 2vw 1.5rem 2vw;
-        padding: 5vw 4vw 5vw 4vw;
-    }
-
     .kategoria-rosliny:after {
         background-position-x: 7rem;
         background-position-y: -4.5rem;
         width: 70%;
+    }
+
+    .kategoria-pogrzebowe:after {
+        background-position-x: 9rem;
+        background-position-y: -1rem;
+        width: 85%;
+    }
+
+    .kategoria-slubne:after {
+        background-position-x: 5rem;
+        background-position-y: -3.5rem;
+        width: 80%;
     }
 
     .gallery .gallery-image {
@@ -1704,6 +1768,18 @@ address {
         background-position-x: 9.3rem;
         background-position-y: -1.5rem;
         width: 90%;
+    }
+
+    .kategoria-pogrzebowe:after {
+        background-position-x: 10rem;
+        background-position-y: 0.5rem;
+        width: 95%;
+    }
+
+    .kategoria-slubne:after {
+        background-position-x: 8rem;
+        background-position-y: -1rem;
+        width: 95%;
     }
 
     h1.sub-heading {
