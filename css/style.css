@@ -1903,9 +1903,9 @@ address {
     }
 
     .kategoria-lasywszkle:after {
-        background-position-x: 5.5rem;
-        background-position-y: 0rem;
-        width: 75%;
+        background-position-x: 6rem;
+        background-position-y: -.5rem;
+        width: 80%;
     }
 
     h1.sub-heading {
