@@ -342,7 +342,7 @@ section {
     font-family: freighttextcmp-pro, serif;
     margin: 2px 0px 45px 0px;
     font-size: 3.5rem;
-    line-height: 3.75rem;
+    line-height: 3.5rem;
 }
 
 .banner-container img {
@@ -839,9 +839,10 @@ h1.link-social {
 }
 
 h2.social {
-    font-size: 19px;
-    font-weight: 400;
+    font-size: 1.5rem;
     padding: 30px 15px 15px 15px;
+    font-family: freighttextcmp-pro, serif;font-weight: 700;
+    font-style: normal;
 }
 
 p.social-small {
@@ -1985,9 +1986,17 @@ address {
 
 p.rok-zal {
     grid-area: rok-zal;
-    font-weight: 600;
     font-size: 3rem;
     text-align: center;
+    font-weight: 600;
+}
+
+.story1 h2, .story2 h2, .story3 h2 {
+    font-family: freighttextcmp-pro, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5rem;
+    line-height: 3.4rem;
 }
 
 p.rok-2000 {
@@ -2346,7 +2355,9 @@ p.rok-obecny {
 }
 
 .zamow-title h1 {
-    font-size: 3.2rem;
+    font-size: 4.5rem;
+    font-family: freighttextcmp-pro, serif;font-weight: 700;
+    font-style: normal;
 }
 
 .zamow-title p {
